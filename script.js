@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Dynamically show/hide "Contact" link in header
-    const heroSection = document.getElementById('hero'); // Target the hero section
+    const heroSection = document.getElementById('hero');
     const contactNavLink = document.getElementById('contact-nav-link');
     const contactMobileNavLink = document.getElementById('contact-mobile-nav-link');
     const heroContactButton = document.getElementById('hero-contact-button');
@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
             heroContactButton.classList.remove('opacity-0', 'pointer-events-none');
             contactNavLink.classList.add('opacity-0', 'pointer-events-none');
             contactMobileNavLink.classList.add('opacity-0', 'pointer-events-none');
-
         } else { // If hero section is NOT visible (user has scrolled past hero)
             // Hide hero button, show nav links as buttons
             heroContactButton.classList.add('opacity-0', 'pointer-events-none');
@@ -277,4 +276,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
         chartObserver.observe(focusChartContainerObserver);
     }
+
+    // --- Floating Contact Button Logic (Simplified) ---
+    const floatingContactButton = document.getElementById('floating-contact-button');
+    const contactSection = document.getElementById('contact'); // Ensure this is defined
+
+    function handleFloatingButtonVisibility() {
+        const isMobile = window.innerWidth < 768;
+        if (!isMobile || !heroSection || !contactSection || !floatingContactButton) {
+            // If not mobile, or elements are missing, ensure button is hidden
+            if (floatingContactButton) {
+                floatingContactButton.classList.add('opacity-0', 'pointer-events-none');
+            }
+            return;
+        }
+
+        const heroRect = heroSection.getBoundingClientRect();
+        const contactRect = contactSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        // Condition to show the button:
+        // 1. Scrolled past the hero section (hero's bottom is above or at the top of the viewport)
+        // 2. Not yet reached the contact section (contact section's top is below the bottom of the viewport)
+        const scrolledPastHero = heroRect.bottom <= 0;
+        const beforeContactSection = contactRect.top >= viewportHeight; // Changed to >= to hide when contact section starts entering
+
+        if (scrolledPastHero && beforeContactSection) {
+            floatingContactButton.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+            floatingContactButton.classList.add('opacity-0', 'pointer-events-none');
+        }
+    }
+
+    // Attach scroll and resize listeners
+    window.addEventListener('scroll', handleFloatingButtonVisibility);
+    window.addEventListener('resize', handleFloatingButtonVisibility);
+
+    // Initial check on load
+    handleFloatingButtonVisibility();
 });

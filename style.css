@@ -853,6 +853,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1118,7 +1122,7 @@ video {
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #fafafa;
-  /* zinc-50 */
+  /* zinc-50 - Casi blanco, base para fondos */
   color: #27272a;
   /* zinc-800 */
 }
@@ -1228,24 +1232,27 @@ h1, h2, h3, h4 {
 
 /* Darker new base color */
 
-/* Color para iconos y elementos con acento (ahora neutro) */
+/* Color para iconos y elementos con acento (ahora el color principal morado) */
 
 .icon-color-accent {
   color: #8e22bb;
 }
 
-/* Color para el checkmark en listas (ahora neutro) */
+/* Morado de acento */
+
+/* Color para el checkmark en listas (ahora el color principal morado) */
 
 .service-slide-content li::before {
   color: #8e22bb;
-  /* Wet Asphalt */
+  /* Morado de acento */
 }
 
-/* Fondo para secciones claras */
+/* Fondo para secciones claras (ahora con un toque de morado muy sutil) */
 
-.bg-slate-100 {
-  background-color: #F8F8F8;
-  /* Light neutral */
+.bg-zinc-100 {
+  /* Renombrado de bg-slate-100 para ser más genérico y menos "gris" */
+  background-color: #F9F5FC;
+  /* Un blanco muy claro con un toque de morado */
 }
 
 .nav-link {
@@ -1324,22 +1331,6 @@ h1, h2, h3, h4 {
   transform: translateY(0);
 }
 
-/* Ajustes de animación para móvil */
-
-@media (max-width: 767px) {
-  .animate-on-scroll {
-    transition-duration: 0.5s;
-    /* Animación más rápida */
-    transform: translateY(20px);
-    /* Menor desplazamiento inicial */
-  }
-
-  .animate-on-scroll.is-visible {
-    transition-delay: 0s !important;
-    /* Elimina retrasos en móvil para una aparición más rápida */
-  }
-}
-
 .contact-circle-button {
   display: flex;
   flex-direction: column;
@@ -1389,7 +1380,7 @@ h1, h2, h3, h4 {
 /* El slide ahora contiene la imagen y la superposición dentro */
 
 .service-slide {
-  min-width: 100%;
+  /* Removed min-w-full; as it's a Tailwind class and should be in HTML */
   color: white;
   display: flex;
   flex-direction: column;
@@ -1548,6 +1539,60 @@ h1, h2, h3, h4 {
   background-color: #8e22bb;
   /* New base color for active dot */
   transform: scale(1.2);
+}
+
+/* Estilos para el botón de contacto flotante en móvil */
+
+#floating-contact-button {
+  position: fixed;
+  bottom: 1.5rem;
+  /* 24px del borde inferior */
+  right: 1.5rem;
+  /* 24px del borde derecho */
+  z-index: 999;
+  /* Asegura que esté por encima de la mayoría de los elementos */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  /* Oculto por defecto en desktop */
+  display: flex;
+  /* Mostrar como flexbox para centrar el icono */
+  /* Eliminamos los estilos de depuración */
+  /* background-color: rgba(255, 0, 0, 0.8); */
+  /* border: 3px solid blue; */
+  border-radius: 50%;
+  /* Asegura que el contenedor también sea circular */
+  width: 56px;
+  /* Asegura que el contenedor tenga el mismo tamaño */
+  height: 56px;
+}
+
+#floating-contact-button a {
+  width: 100%;
+  /* El enlace ocupa todo el contenedor */
+  height: 100%;
+  /* El enlace ocupa todo el contenedor */
+  font-size: 1.5rem;
+  /* Tamaño del icono */
+  /* Aseguramos que la burbuja sea visible con un color de fondo y forma */
+  background-color: #8e22bb;
+  /* Color de fondo explícito */
+  border-radius: 50%;
+  /* Forma circular explícita */
+  display: flex;
+  /* Para centrar el icono dentro de la burbuja */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Aseguramos que esté por encima de todo */
+  /* Eliminamos los estilos de depuración */
+  /* border: 2px solid yellow; */
+}
+
+/* Ocultar en desktop */
+
+@media (min-width: 768px) {
+  #floating-contact-button {
+    display: none;
+  }
 }
 
 .hover\:bg-slate-700:hover {
