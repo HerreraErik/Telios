@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telios Connect - Soluciones de Conectividad, Redes y Hotspots</title>
+    <meta name="description" content="Telios Connect ofrece soluciones expertas en conectividad, redes y sistemas Hotspot en Venezuela, incluyendo configuración, gestión de usuarios, facturación, y soporte con bot de Telegram.">
+    <meta name="keywords" content="hotspot venezuela, configuración hotspot, sistema de fichas hotspot, telios connect, redes, telecomunicaciones, ciberseguridad, internet rural, conectividad bolivar">
+    <!-- Se ha eliminado el CDN de Tailwind CSS. Para producción, deberías compilar tu CSS con Tailwind. -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- UIicons Flaticon CDN para iconos (Bold Rounded) -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+</head>
+<body class="text-slate-800">
+
+    <header class="header-footer-bg text-white p-4 sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto flex items-center">
+            <a href="#hero" class="text-2xl font-black tracking-wider flex items-center" style="font-family: 'Montserrat', sans-serif;">
+                <img class="h-10 mr-2 rounded" src="img/logo.svg" alt="Telios Connect Logo">
+                </a>
+            <div class="hidden md:flex flex-grow justify-end space-x-6">
+                <a href="#about" class="nav-link font-semibold flex-shrink-0 py-2">Quiénes Somos</a>
+                <a href="#services" class="nav-link font-semibold flex-shrink-0 py-2">Servicios</a>
+                <a href="#hotspots" class="nav-link font-semibold flex-shrink-0 py-2">Hotspots</a>
+                <a href="#satellital-solutions" class="nav-link font-semibold flex-shrink-0 py-2">Satelitales</a>
+                <a href="#focus" class="nav-link font-semibold flex-shrink-0 py-2">Nuestro Enfoque</a>
+                <a href="#contact" id="contact-nav-link" class="nav-link font-semibold px-4 py-2 rounded-md bg-violet-600 hover:bg-violet-700 text-white opacity-0 pointer-events-none">Contacto</a>
+            </div>
+            <div class="md:hidden ml-auto">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Quiénes Somos</a>
+            <a href="#services" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Servicios</a>
+            <a href="#hotspots" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Hotspots</a>
+            <a href="#satellital-solutions" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Satelitales</a>
+            <a href="#focus" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Nuestro Enfoque</a>
+            <a href="#contact" id="contact-mobile-nav-link" class="block py-2 px-4 text-sm rounded-md bg-violet-600 hover:bg-violet-700 text-white opacity-0 pointer-events-none">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-bg py-24 md:py-32 relative overflow-hidden">
+            <!-- Imagen de fondo de la sección Hero con WebP responsivo -->
+            <picture class="absolute inset-0 w-full h-full object-cover z-0">
+                <!-- Versión para escritorio (ancho mínimo de 768px) -->
+                <source media="(min-width: 768px)" srcset="img/hero-background-desktop.webp" type="image/webp">
+                <!-- Versión para móvil (por defecto) -->
+                <img src="img/hero-background-mobile.webp" alt="Fondo de Operaciones Críticas" class="w-full h-full object-cover">
+            </picture>
+            <div class="hero-overlay absolute inset-0 bg-zinc-900 opacity-70 z-10"></div>
+
+            <div class="container mx-auto px-6 text-center relative z-20">
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 text-white animate-on-scroll">Soluciones de Conectividad para Operaciones Críticas</h1>
+                <p class="max-w-4xl mx-auto text-lg md:text-xl text-slate-300 mb-10 animate-on-scroll" style="transition-delay: 0.2s;">
+                    Somos su socio estratégico en redes y telecomunicaciones, especializados en entornos geográficamente desafiantes. Garantizamos continuidad operativa y eficiencia en la transmisión de datos donde más lo necesita, transformando los retos logísticos en una ventaja competitiva.
+                </p>
+                <a href="#contact" id="hero-contact-button" class="btn-primary-bg hover:btn-primary-hover-bg text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition-all duration-300 animate-on-scroll" style="transition-delay: 0.4s;">
+                    Contáctenos
+                </a>
+            </div>
+        </section>
+
+        <section id="guarantee" class="py-10 guarantee-bg text-white text-center">
+            <div class="container mx-auto px-6 flex items-center justify-center gap-4">
+                <i class="fi-br-badge text-4xl"></i>
+                <p class="text-lg md:text-xl font-semibold">¡Tu satisfacción es nuestra prioridad! Ofrecemos una garantía de 30 días en todos nuestros servicios.</p>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold brand-primary-text animate-on-scroll">Quiénes Somos</h2>
+                    <p class="text-lg mt-2 brand-secondary-text max-w-3xl mx-auto animate-on-scroll" style="transition-delay: 0.2s;">Nuestra filosofía se basa en la fiabilidad, la agilidad y un profundo conocimiento local para impulsar el éxito de nuestros clientes.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-start mb-12 md:mb-16">
+                    <div class="animate-on-scroll">
+                        <h3 class="text-2xl font-bold brand-primary-text mb-3 flex items-center">
+                            <i class="fi-br-flag icon-color-accent text-3xl mr-2"></i>Misión
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed">Proveer soluciones de conectividad y redes robustas y eficientes, superando los desafíos geográficos y logísticos, para asegurar la continuidad operativa y el crecimiento de nuestros clientes en el Estado Bolívar y más allá.</p>
+                    </div>
+                    <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+                        <h3 class="text-2xl font-bold brand-primary-text mb-3 flex items-center">
+                            <i class="fi-br-eye icon-color-accent text-3xl mr-2"></i>Visión
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed">Ser el referente principal en infraestructura de telecomunicaciones y soporte tecnológico en el sur de Venezuela, reconocidos por nuestra capacidad de innovar, nuestra fiabilidad y nuestro compromiso con la excelencia en entornos complejos.</p>
+                    </div>
+                </div>
+                <div class="card-bg p-6 md:p-8 rounded-lg shadow-xl animate-on-scroll">
+                    <h3 class="text-2xl md:text-3xl font-bold brand-primary-text text-center mb-8">Nuestros Valores</h3>
+                    <!-- Contenedor de valores: Grid de 2 columnas para móvil, 3 para sm, 5 para lg -->
+                    <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+                        <div class="p-4 animate-on-scroll text-center" style="transition-delay: 0.1s;">
+                            <div class="text-5xl mb-3 icon-color-accent">
+                                <i class="fi-br-shield-check"></i>
+                            </div>
+                            <h4 class="font-semibold text-slate-700 text-lg">Fiabilidad</h4>
+                        </div>
+                        <div class="p-4 animate-on-scroll text-center" style="transition-delay: 0.2s;">
+                            <div class="text-5xl mb-3 icon-color-accent">
+                                <i class="fi-br-bolt"></i>
+                            </div>
+                            <h4 class="font-semibold text-slate-700 text-lg">Agilidad</h4>
+                        </div>
+                        <div class="p-4 animate-on-scroll text-center" style="transition-delay: 0.3s;">
+                            <div class="text-5xl mb-3 icon-color-accent">
+                                <i class="fi-br-marker"></i>
+                            </div>
+                            <h4 class="font-semibold text-slate-700 text-lg">Conocimiento Local</h4>
+                        </div>
+                        <div class="p-4 animate-on-scroll text-center" style="transition-delay: 0.4s;">
+                            <div class="text-5xl mb-3 icon-color-accent">
+                                <i class="fi-br-trophy"></i>
+                            </div>
+                            <h4 class="font-semibold text-slate-700 text-lg">Excelencia Técnica</h4>
+                        </div>
+                        <!-- 'Integridad' ocupa 2 columnas en móvil (para centrar) y se ajusta a 1 en sm/lg -->
+                        <div class="p-4 animate-on-scroll text-center col-span-2 sm:col-span-1" style="transition-delay: 0.5s;">
+                            <div class="text-5xl mb-3 icon-color-accent">
+                                <i class="fi-br-handshake"></i>
+                            </div>
+                            <h4 class="font-semibold text-slate-700 text-lg">Integridad</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 md:py-20 bg-zinc-100">
+            <div class="container mx-auto px-6">
+                <!-- Contenedor principal para el diseño de dos columnas en escritorio -->
+                <div class="md:grid md:grid-cols-2 md:gap-12 md:items-center">
+                    <!-- Columna izquierda: Descripción del catálogo -->
+                    <div class="text-center md:text-left mb-12 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-extrabold brand-primary-text animate-on-scroll">Catálogo de Servicios Dinámico</h2>
+                        <p class="text-lg mt-2 brand-secondary-text max-w-3xl mx-auto md:mx-0 animate-on-scroll" style="transition-delay: 0.2s;">
+                            Explore nuestra gama completa de soluciones especializadas. Desde la infraestructura más robusta hasta la ciberseguridad más avanzada, nuestras ofertas están diseñadas para impulsar su eficiencia operativa y asegurar su crecimiento. Deslice las tarjetas para descubrir cómo podemos transformar sus desafíos en oportunidades.
+                        </p>
+                    </div>
+
+                    <!-- Columna derecha: Carrusel de servicios -->
+                    <div id="services-carousel-wrapper" class="relative animate-on-scroll" style="transition-delay: 0.3s;">
+                        <div id="services-carousel" class="relative overflow-hidden rounded-lg shadow-xl bg-slate-800">
+                            <div id="services-slides-track" class="flex transition-transform duration-700 ease-in-out h-full">
+                                <!-- Slide 1: Diseño e Implementación de Infraestructura -->
+                                <div class="service-slide relative min-w-full flex flex-col justify-center items-center text-center p-8 h-full box-border">
+                                    <picture class="service-slide-image absolute inset-0 w-full h-full object-cover z-0">
+                                        <source media="(min-width: 768px)" srcset="img/design-network-desktop.webp" type="image/webp">
+                                        <img src="img/design-network-mobile.webp" alt="Diseño e Implementación de Redes" class="w-full h-full object-cover">
+                                    </picture>
+                                    <div class="service-slide-overlay absolute inset-0 bg-black opacity-60 z-10 rounded-lg"></div>
+                                    <div class="service-slide-content relative z-20 text-white flex flex-col justify-center items-center h-full box-border">
+                                        <h3 class="font-bold mb-4 text-xl md:text-2xl">Diseño de Infraestructura</h3>
+                                        <ul class="space-y-2 text-sm md:text-base text-left">
+                                            <li>Diseño y Despliegue de Redes LAN/WAN.</li>
+                                            <li>Conectividad Inalámbrica Avanzada (Wi-Fi, Radio Enlaces).</li>
+                                            <li>Infraestructura de Fibra Óptica y Cableado Estructurado.</li>
+                                            <li>Servidores, Virtualización y Soluciones Cloud.</li>
+                                            <li>Sistemas Integrales de Videovigilancia (CCTV/IP).</li>
+                                            <li>Telefonía IP y Comunicaciones Unificadas.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Slide 2: Optimización y Gestión de Redes -->
+                                <div class="service-slide relative min-w-full flex flex-col justify-center items-center text-center p-8 h-full box-border">
+                                    <picture class="service-slide-image absolute inset-0 w-full h-full object-cover z-0">
+                                        <source media="(min-width: 768px)" srcset="img/optimization-desktop.webp" type="image/webp">
+                                        <img src="img/optimization-mobile.webp" alt="Optimización y Gestión de Redes" class="w-full h-full object-cover">
+                                    </picture>
+                                    <div class="service-slide-overlay absolute inset-0 bg-black opacity-60 z-10 rounded-lg"></div>
+                                    <div class="service-slide-content relative z-20 text-white flex flex-col justify-center items-center h-full box-border">
+                                        <h3 class="font-bold mb-4 text-xl md:text-2xl">Gestión de Redes</h3>
+                                        <ul class="space-y-2 text-sm md:text-base text-left">
+                                           <li>Configuración y Optimización de Equipos de Red.</li>
+                                           <li>Gestión de Calidad de Servicio (QoS) y Balanceo de Carga.</li>
+                                           <li>Segmentación de Red (VLANs) y Enrutamiento Dinámico Avanzado.</li>
+                                           <li>Monitoreo Proactivo de Red y Gestión de Alertas.</li>
+                                           <li>Soluciones de Hotspot y Gestión de Usuarios Avanzada.</li>
+                                           <li>Mantenimiento Preventivo y Correctivo de Infraestructura.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Slide 3: Ciberseguridad y Protección de Datos -->
+                                <div class="service-slide relative min-w-full flex flex-col justify-center items-center text-center p-8 h-full box-border">
+                                    <picture class="service-slide-image absolute inset-0 w-full h-full object-cover z-0">
+                                        <source media="(min-width: 768px)" srcset="img/cybersecurity-desktop.webp" type="image/webp">
+                                        <img src="img/cybersecurity-mobile.webp" alt="Ciberseguridad y Protección de Datos" class="w-full h-full object-cover">
+                                    </picture>
+                                    <div class="service-slide-overlay absolute inset-0 bg-black opacity-60 z-10 rounded-lg"></div>
+                                    <div class="service-slide-content relative z-20 text-white flex flex-col justify-center items-center h-full box-border">
+                                        <h3 class="font-bold mb-4 text-xl md:text-2xl">Ciberseguridad</h3>
+                                        <ul class="space-y-2 text-sm md:text-base text-left">
+                                            <li>Implementación y Gestión de Firewalls (IPS/IDS).</li>
+                                            <li>Redes Privadas Virtuales (VPNs) Seguras.</li>
+                                            <li>Estrategias de Respaldo y Recuperación de Datos (Backup & DR).</li>
+                                            <li>Seguridad de Endpoints y Antivirus Centralizado.</li>
+                                            <li>Auditorías de Seguridad y Análisis de Vulnerabilidades.</li>
+                                            <li>Protección contra Ransomware y Amenazas Persistentes.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Slide 4: Soporte Técnico y Servicios Gestionados -->
+                                <div class="service-slide relative min-w-full flex flex-col justify-center items-center text-center p-8 h-full box-border">
+                                    <picture class="service-slide-image absolute inset-0 w-full h-full object-cover z-0">
+                                        <source media="(min-width: 768px)" srcset="img/tech-support-desktop.webp" type="image/webp">
+                                        <img src="img/tech-support-mobile.webp" alt="Soporte Técnico y Servicios Gestionados" class="w-full h-full object-cover">
+                                    </picture>
+                                    <div class="service-slide-overlay absolute inset-0 bg-black opacity-60 z-10 rounded-lg"></div>
+                                    <div class="service-slide-content relative z-20 text-white flex flex-col justify-center items-center h-full box-border">
+                                        <h3 class="font-bold mb-4 text-xl md:text-2xl">Soporte Técnico</h3>
+                                        <ul class="space-y-2 text-sm md:text-base text-left">
+                                            <li>Soporte de Infraestructura de TI y Puestos de Trabajo.</li>
+                                            <li>Administración y Mantenimiento Proactivo de Servidores.</li>
+                                            <li>Servicio Remoto y en Campo Flexible.</li>
+                                            <li>Contratos de Mantenimiento y Soporte Prioritario 24/7.</li>
+                                            <li>Gestión de Incidentes y Resolución de Problemas.</li>
+                                            <li>Optimización de Rendimiento de Equipos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Slide 5: Asesoría Estratégica y Consultoría -->
+                                <div class="service-slide relative min-w-full flex flex-col justify-center items-center text-center p-8 h-full box-border">
+                                    <picture class="service-slide-image absolute inset-0 w-full h-full object-cover z-0">
+                                        <source media="(min-width: 768px)" srcset="img/consulting-desktop.webp" type="image/webp">
+                                        <img src="img/consulting-mobile.webp" alt="Asesoría Estratégica y Consultoría" class="w-full h-full object-cover">
+                                    </picture>
+                                    <div class="service-slide-overlay absolute inset-0 bg-black opacity-60 z-10 rounded-lg"></div>
+                                    <div class="service-slide-content relative z-20 text-white flex flex-col justify-center items-center h-full box-border">
+                                        <h3 class="font-bold mb-4 text-xl md:text-2xl">Asesoría y Consultoría</h3>
+                                         <ul class="space-y-2 text-sm md:text-base text-left">
+                                            <li>Auditorías Completas de Red y Seguridad.</li>
+                                            <li>Planificación y Diseño de Soluciones Tecnológicas a Medida.</li>
+                                            <li>Consultoría en Transformación Digital e Innovación.</li>
+                                            <li>Capacitación Técnica Especializada para Equipos.</li>
+                                            <li>Evaluación de Tecnologías y Recomendaciones.</li>
+                                            <li>Desarrollo de Políticas de Uso y Seguridad.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="prev-slide" class="carousel-button" aria-label="Servicio Anterior">❮</button>
+                            <button id="next-slide" class="carousel-button" aria-label="Siguiente Servicio">❯</button>
+                        </div>
+                        <div id="carousel-pagination" class="flex justify-center mt-6 space-x-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hotspots" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold brand-primary-text animate-on-scroll">Soluciones Avanzadas de Hotspot
+                        <span class="inline-block icon-color-accent">
+                            <i class="fi-br-wifi text-2xl"></i>
+                        </span>
+                        </h2>
+                    <p class="text-lg mt-2 brand-secondary-text max-w-3xl mx-auto animate-on-scroll" style="transition-delay: 0.2s;">Potencie su negocio o comunidad con nuestros sistemas Hotspot personalizables, seguros y fáciles de gestionar.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div class="animate-on-scroll" style="transition-delay: 0.3s;">
+                        <div id="hotspot-image-gallery" class="relative w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-xl mb-6 md:mb-0">
+                            <picture class="hotspot-gallery-img absolute inset-0 w-full h-full object-cover">
+                                <source srcset="img/hotspot-management.webp" type="image/webp">
+                                <img src="img/hotspot-management.webp" alt="Gestión Avanzada de Hotspots" class="w-full h-full object-cover">
+                            </picture>
+                            <picture class="hotspot-gallery-img absolute inset-0 w-full h-full object-cover">
+                                <source srcset="img/captive-portal.webp" type="image/webp">
+                                <img src="img/captive-portal.webp" alt="Portal Cautivo Personalizable para Hotspot" class="w-full h-full object-cover">
+                            </picture>
+                            <picture class="hotspot-gallery-img absolute inset-0 w-full h-full object-cover">
+                                <source srcset="img/integrated-billing.webp" type="image/webp">
+                                <img src="img/integrated-billing.webp" alt="Sistema de Facturación para Hotspots" class="w-full h-full object-cover">
+                            </picture>
+                            <picture class="hotspot-gallery-img absolute inset-0 w-full h-full object-cover">
+                                <source srcset="img/telegram-support.webp" type="image/webp">
+                                <img src="img/telegram-support.webp" alt="Soporte y Alertas Hotspot vía Telegram" class="w-full h-full object-cover">
+                            </picture>
+                        </div>
+                         <p class="text-center text-sm text-slate-500 mt-2">Imágenes representativas de nuestras soluciones Hotspot.</p>
+                    </div>
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="feature-item-hotspot animate-on-scroll" style="transition-delay: 0.4s;"><div class="flex items-start"><span class="feature-icon mr-4 icon-color-accent">
+                            <i class="fi-br-settings text-2xl"></i>
+                        </span><div><h4 class="text-xl font-bold mb-1">Configuración Profesional</h4><p class="text-slate-600 leading-relaxed">Implementamos y ajustamos su Hotspot (Mikrotik, UniFi, etc.) para un rendimiento óptimo, con portales cautivos personalizados y gestión de ancho de banda.</p></div></div></div>
+                        <div class="feature-item-hotspot animate-on-scroll" style="transition-delay: 0.5s;"><div class="flex items-start"><span class="feature-icon mr-4 icon-color-accent">
+                            <i class="fi-br-credit-card text-2xl"></i>
+                        </span><div><h4 class="text-xl font-bold mb-1">Sistema de Fichas y Facturación</h4><p class="text-slate-600 leading-relaxed">Integramos sistemas de venta de acceso por tiempo o datos (fichas/vouchers), planes recurrentes y pasarelas de pago para monetizar su red WiFi.</p></div></div></div>
+                        <div class="feature-item-hotspot animate-on-scroll" style="transition-delay: 0.6s;"><div class="flex items-start"><span class="feature-icon mr-4 icon-color-accent">
+                            <i class="fi-br-database text-2xl"></i>
+                        </span><div><h4 class="text-xl font-bold mb-1">Respaldos y Continuidad</h4><p class="text-slate-600 leading-relaxed">Aseguramos la configuración de su Hotspot y los datos de usuarios con sistemas de respaldo automáticos para garantizar la continuidad del servicio.</p></div></div></div>
+                        <div class="feature-item-hotspot animate-on-scroll" style="transition-delay: 0.7s;"><div class="flex items-start"><span class="feature-icon mr-4 icon-color-accent">
+                            <i class="fi-br-robot text-2xl"></i>
+                        </span><div><h4 class="text-xl font-bold mb-1">Integración con Bot de Telegram</h4><p class="text-slate-600 leading-relaxed">Reciba notificaciones, gestione usuarios básicos o genere fichas directamente desde Telegram, facilitando la administración remota.</p></div></div></div>
+                        <div class="feature-item-hotspot animate-on-scroll" style="transition-delay: 0.8s;"><div class="flex items-start"><span class="feature-icon mr-4 icon-color-accent">
+                            <i class="fi-br-traffic-light text-2xl"></i>
+                        </span><div><h4 class="text-xl font-bold mb-1">Gestión de Tráfico Avanzada</h4><p class="text-slate-600 leading-relaxed">Implementamos QoS, división de tráfico y políticas de uso para asegurar una experiencia equitativa y priorizar servicios críticos en su red Hotspot.</p></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="satellital-solutions" class="py-16 md:py-20 bg-zinc-100">
+            <div class="container mx-auto px-6">
+                <div class="md:grid md:grid-cols-2 md:gap-12 md:items-center">
+                    <!-- Columna izquierda: Descripción de Soluciones Satelitales -->
+                    <div class="text-center md:text-left mb-12 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-extrabold brand-primary-text animate-on-scroll">Soluciones Satelitales</h2>
+                        <p class="text-lg mt-2 brand-secondary-text max-w-3xl mx-auto md:mx-0 animate-on-scroll" style="transition-delay: 0.2s;">
+                            En Telios Connect, rompemos las barreras geográficas para llevarte conectividad donde otros no llegan. Nuestras soluciones satelitales garantizan internet de alta velocidad y comunicaciones fiables, esenciales para operaciones críticas y para conectar comunidades y negocios en las zonas más remotas. Desde la instalación de Starlink hasta el mantenimiento de equipos VSAT, aseguramos su conexión vital.
+                        </p>
+                    </div>
+
+                    <!-- Columna derecha: Tarjetas de servicios satelitales -->
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 animate-on-scroll" style="transition-delay: 0.4s;">
+                            <div class="flex items-start">
+                                <span class="feature-icon mr-4 icon-color-accent">
+                                    <i class="fi-br-satellite text-2xl"></i>
+                                </span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1 brand-primary-text">Instalación de Internet Satelital</h4>
+                                    <p class="text-slate-600 leading-relaxed">Implementación experta de antenas VSAT y otros terminales satelitales. Alineación de precisión para maximizar la señal y asegurar una conexión robusta y de alta velocidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 animate-on-scroll" style="transition-delay: 0.5s;">
+                            <div class="flex items-start">
+                                <span class="feature-icon mr-4 icon-color-accent">
+                                    <i class="fi-br-receipt text-2xl"></i>
+                                </span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1 brand-primary-text">Instalación Starlink y Tickeras</h4>
+                                    <p class="text-slate-600 leading-relaxed">Montaje y configuración optimizada de equipos Starlink. Ofrecemos venta de tickets prepago para facilitar el acceso y la gestión de la conectividad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 animate-on-scroll" style="transition-delay: 0.6s;">
+                            <div class="flex items-start">
+                                <span class="feature-icon mr-4 icon-color-accent">
+                                    <i class="fi-br-wrench-simple text-2xl"></i>
+                                </span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1 brand-primary-text">Mantenimiento y Soporte Satelital</h4>
+                                    <p class="text-slate-600 leading-relaxed">Diagnóstico avanzado, mantenimiento preventivo y correctivo de equipos satelitales. Aseguramos la continuidad operativa y la longevidad de su inversión.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="focus" class="py-16 md:py-20 bg-zinc-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold brand-primary-text animate-on-scroll">Nuestro Enfoque y Público Objetivo</h2>
+                    <p class="text-lg mt-2 brand-secondary-text max-w-3xl mx-auto animate-on-scroll" style="transition-delay: 0.2s;">Entendemos los desafíos únicos de nuestra región y adaptamos nuestras soluciones para servir a sectores clave.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+                    <div class="animate-on-scroll" style="transition-delay: 0.3s;">
+                        <h3 class="text-2xl font-bold brand-primary-text mb-6">A Quién Servimos</h3>
+                        <div class="space-y-6">
+                            <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h4 class="font-bold text-xl text-slate-800 mb-2">Empresas en Zonas Remotas
+                                    <span class="float-right text-3xl">
+                                        <i class="fi-br-mountains icon-color-accent"></i>
+                                    </span>
+                                    </h4>
+                                <p class="text-slate-600 leading-relaxed">Operaciones mineras, agrícolas y de logística que requieren conectividad robusta y fiable en entornos desafiantes.</p>
+                            </div>
+                            <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h4 class="font-bold text-xl text-slate-800 mb-2">PYMES en Centros Urbanos
+                                    <span class="float-right text-3xl">
+                                        <i class="fi-br-building icon-color-accent"></i>
+                                    </span>
+                                    </h4>
+                                <p class="text-slate-600 leading-relaxed">Oficinas, hoteles y comercios que necesitan redes seguras, eficientes y soluciones de hotspot para sus clientes.</p>
+                            </div>
+                            <div class="card-bg p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h4 class="font-bold text-xl text-slate-800 mb-2">Particulares con Alta Demanda
+                                    <span class="float-right text-3xl">
+                                        <i class="fi-br-home icon-color-accent"></i>
+                                    </span>
+                                    </h4>
+                                <p class="text-slate-600 leading-relaxed">Hogares y profesionales que dependen de una conectividad avanzada para teletrabajo y educación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="focus-chart-container-observer" class="animate-on-scroll" style="transition-delay: 0.4s;">
+                        <div class="chart-container card-bg p-4 rounded-lg shadow-lg">
+                            <canvas id="focusChart"></canvas>
+                        </div>
+                        <p class="text-center mt-4 text-sm text-slate-500">Visualización del enfoque principal de nuestros proyectos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold brand-primary-text mb-4 animate-on-scroll">Contáctanos</h2>
+                <p class="text-lg mt-2 brand-secondary-text max-w-3xl mx-auto mb-8 animate-on-scroll" style="transition-delay: 0.2s;">Estamos listos para resolver tus desafíos de conectividad. Comunícate con nosotros.</p>
+                <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
+                    <a href="mailto:info@teliosconnect.com" class="contact-circle-button accent-brown-bg text-white font-semibold shadow-md hover:shadow-lg animate-on-scroll" style="transition-delay: 0.4s;">
+                        <span class="text-2xl">
+                            <i class="fi-br-envelope"></i>
+                        </span>
+                        <span class="button-text">Enviar Correo</span>
+                    </a>
+                    <a href="https://wa.me/584249263394" target="_blank" class="contact-circle-button accent-green-bg text-white font-semibold shadow-md hover:shadow-lg animate-on-scroll" style="transition-delay: 0.5s;">
+                        <span class="text-2xl">
+                            <img class="w-8 h-8" src="img/ws-icon.svg" alt="Icono de WhatsApp">
+                        </span>
+                        <span class="button-text">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="header-footer-bg text-slate-300 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <img class="h-12 mx-auto mb-4 rounded" src="img/logo.svg" alt="Telios Connect Logo">
+            <p class="font-bold text-xl mb-2 text-white">Telios Connect</p>
+            <p class="italic">"Conectividad robusta donde otros no llegan."</p>
+            <p class="text-sm mt-6 text-zinc-400">&copy; <span id="currentYear"></span> Telios Connect. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>
