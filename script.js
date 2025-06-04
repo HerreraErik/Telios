@@ -211,14 +211,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const chartData = {
             labels: ['Empresas Zonas Remotas', 'PYMES Urbanas', 'Particulares Alta Demanda'],
             datasets: [{
-                data: [45, 35, 20], // Example percentages
+                data: [45, 35, 20],
                 backgroundColor: [
-                    '#8e22bb', // teal-500
-                    '#4A006A', // amber-700
-                    '#A040D0'  // lime-600
+                    '#cc33cc', 
+                    '#660066',
+                    '#99cc33'  
                 ],
                 hoverOffset: 10,
-                borderWidth: 0 // Remove border for cleaner look
+                borderWidth: 0 
             }]
         };
 
