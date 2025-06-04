@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 data: [45, 35, 20],
                 backgroundColor: [
                     '#8e22bb', 
-                    '#660066',
+                    '#cc33cc',
                     '#99cc33'
                 ],
                 hoverOffset: 10,
