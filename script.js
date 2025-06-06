@@ -37,18 +37,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
     animateOnScrollElements.forEach(element => observer.observe(element));
 
-    // Show/hide "Contact" link in header
+    // Logic to show/hide the "Contact" link in the header for desktop/mobile
+    // This link should be hidden when the hero section is visible, and appear when scrolled past it.
     const heroSection = document.getElementById('hero');
-    const contactNavLink = document.getElementById('contact-nav-link');
-    const contactMobileNavLink = document.getElementById('contact-mobile-nav-link');
+    const contactNavLink = document.getElementById('contact-nav-link'); // Desktop header link
+    const contactMobileNavLink = document.getElementById('contact-mobile-nav-link'); // Mobile header link
     if (heroSection && contactNavLink && contactMobileNavLink) {
         const heroSectionObserver = new IntersectionObserver((entries) => {
             const isIntersecting = entries[0].isIntersecting;
-            contactNavLink.classList.toggle('opacity-0', !isIntersecting);
-            contactNavLink.classList.toggle('pointer-events-none', !isIntersecting);
-            contactMobileNavLink.classList.toggle('opacity-0', !isIntersecting);
-            contactMobileNavLink.classList.toggle('pointer-events-none', !isIntersecting);
-        }, { threshold: 0.1, rootMargin: "-100px 0px 0px 0px" });
+            
+            // If the hero section is intersecting (visible), hide the contact links.
+            // If the hero section is NOT intersecting (scrolled past), show the contact links.
+            contactNavLink.classList.toggle('opacity-0', isIntersecting);
+            contactNavLink.classList.toggle('pointer-events-none', isIntersecting);
+            
+            // Apply the same logic for the mobile contact link in the header menu
+            contactMobileNavLink.classList.toggle('opacity-0', isIntersecting);
+            contactMobileNavLink.classList.toggle('pointer-events-none', isIntersecting);
+        }, { threshold: 0.1, rootMargin: "-100px 0px 0px 0px" }); // Adjust rootMargin if needed for earlier/later trigger
         heroSectionObserver.observe(heroSection);
     }
     
@@ -206,24 +212,35 @@ document.addEventListener('DOMContentLoaded', function() {
         chartObserver.observe(focusChartCanvas.parentElement);
     }
 
-    // Floating Contact Button Logic
+    // Floating Contact Button Logic (for mobile view only)
     const floatingContactButton = document.getElementById('floating-contact-button');
     const contactSection = document.getElementById('contact');
+    
+    // Only if the elements exist, the logic is added
     if (floatingContactButton && heroSection && contactSection) {
         const handleFloatingButtonVisibility = () => {
             const heroRect = heroSection.getBoundingClientRect();
             const contactRect = contactSection.getBoundingClientRect();
-            const scrolledPastHero = heroRect.bottom < 100; // User scrolled down a bit
-            const beforeContact = contactRect.top > window.innerHeight - contactRect.height / 2;
             
+            // Determine if the user has scrolled past the hero section
+            // and if the contact section has not fully entered the view
+            const scrolledPastHero = heroRect.bottom < 0; // When the bottom of the hero is out of screen (above)
+            const beforeContact = contactRect.top > window.innerHeight; // When the top of contact is out of screen (below)
+            
+            // The floating button should only appear on small screens (less than 768px)
+            // and only when the hero section has been passed and the contact section has not yet been reached.
             if (window.innerWidth < 768 && scrolledPastHero && beforeContact) {
                 floatingContactButton.classList.remove('opacity-0', 'pointer-events-none');
             } else {
                 floatingContactButton.classList.add('opacity-0', 'pointer-events-none');
             }
         };
+
+        // Listen for scroll and resize events to update button visibility
         window.addEventListener('scroll', handleFloatingButtonVisibility);
         window.addEventListener('resize', handleFloatingButtonVisibility);
-        handleFloatingButtonVisibility(); // Initial check
+        
+        // Execute the function once on load to set the correct initial state
+        handleFloatingButtonVisibility();
     }
 });

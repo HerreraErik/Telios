@@ -69,7 +69,113 @@
             </div>
         </section>
 
-        <section id="about" class="py-16 md:py-24 bg-zinc-900">
+        <section id="services" class="py-16 md:py-24 bg-zinc-900">
+            <div class="container mx-auto px-4">
+                <div class="title-card animate-on-scroll">
+                    <h2 class="title-card-header">Nuestros Servicios</h2>
+                    <p class="title-card-text">
+                        Descubra cómo podemos construir juntos un camino hacia un futuro con mejores conexiones, adaptadas a su medida.
+                    </p>
+                </div>
+
+                <div id="services-carousel-wrapper" class="relative animate-on-scroll mt-16">
+                    <div id="carousel" class="overflow-hidden">
+                        <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out -mx-3" style="gap: 1.5rem;">
+                            
+                            <!-- Tarjeta de Servicio: Diseño e Infraestructura -->
+                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
+                                <picture>
+                                    <!-- Versión de escritorio WebP -->
+                                    <source media="(min-width: 768px)" srcset="img/design-network-desktop.webp" type="image/webp">
+                                    <!-- Versión móvil WebP -->
+                                    <source srcset="img/design-network-mobile.webp" type="image/webp">
+                                    <!-- La imagen principal solo para navegadores que no soportan <picture> o si las fuentes fallan -->
+                                    <img alt="Imagen de Diseño e Infraestructura" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                </picture>
+                                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
+                                    <h3 class="text-2xl font-bold text-white mb-3">Diseño e Infraestructura</h3>
+                                    <p class="text-gray-200 leading-relaxed">Planificamos y desplegamos redes robustas, desde radioenlace y fibra óptica hasta soluciones Cloud, videovigilancia y telefonía IP.</p>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta de Servicio: Gestión y Optimización -->
+                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
+                                <picture>
+                                    <!-- Versión de escritorio WebP -->
+                                    <source media="(min-width: 768px)" srcset="img/optimization-desktop.webp" type="image/webp">
+                                    <!-- Versión móvil WebP -->
+                                    <source srcset="img/optimization-mobile.webp" type="image/webp">
+                                    <img alt="Imagen de Optimización y Gestión" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                </picture>
+                                <div class="absolute inset-0 bg-black bg-opacity-60 "></div>
+                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
+                                    <h3 class="text-2xl font-bold text-white mb-3">Gestión y Optimización</h3>
+                                    <p class="text-gray-200 leading-relaxed">Configuramos y optimizamos su red para el máximo rendimiento, incluyendo calidad de servicio, balanceo de carga y monitoreo continuo.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Tarjeta de Servicio: Ciberseguridad -->
+                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
+                                <picture>
+                                    <!-- Versión de escritorio WebP -->
+                                    <source media="(min-width: 768px)" srcset="img/cybersecurity-desktop.webp" type="image/webp">
+                                    <!-- Versión móvil WebP -->
+                                    <source srcset="img/cybersecurity-mobile.webp" type="image/webp">
+                                    <img alt="Imagen de Ciberseguridad" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                </picture>
+                                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
+                                    <h3 class="text-2xl font-bold text-white mb-3">Ciberseguridad</h3>
+                                    <p class="text-gray-200 leading-relaxed">Protegemos sus activos digitales contra amenazas, garantizando la confidencialidad, integridad y disponibilidad de su información.</p>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta de Servicio: Soporte Técnico -->
+                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
+                                <picture>
+                                    <!-- Versión de escritorio WebP -->
+                                    <source media="(min-width: 768px)" srcset="img/tech-support-desktop.webp" type="image/webp">
+                                    <!-- Versión móvil WebP -->
+                                    <source srcset="img/tech-support-mobile.webp" type="image/webp">
+                                    <img alt="Imagen de Soporte Técnico" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                </picture>
+                                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
+                                    <h3 class="text-2xl font-bold text-white mb-3">Soporte Técnico</h3>
+                                    <p class="text-gray-200 leading-relaxed">Ofrecemos soporte técnico experto y servicios gestionados con mantenimiento proactivo y resolución de incidentes 24/7.</p>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta de Servicio: Asesoría y Consultoría -->
+                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
+                                <picture>
+                                    <!-- Versión de escritorio WebP -->
+                                    <source media="(min-width: 768px)" srcset="img/consulting-desktop.webp" type="image/webp">
+                                    <!-- Versión móvil WebP -->
+                                    <source srcset="img/consulting-mobile.webp" type="image/webp">
+                                    <img alt="Imagen de Consultoría" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                </picture>
+                                <div class="absolute inset-0 bg-black bg-opacity-60 "></div>
+                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
+                                    <h3 class="text-2xl font-bold text-white mb-3">Asesoría y Consultoría</h3>
+                                    <p class="text-gray-200 leading-relaxed">Le guiamos en la transformación digital, con auditorías, planificación a medida, capacitación y evaluación de nuevas tecnologías.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="btn-prev" class="absolute left-0 top-1/2 z-20 transform -translate-y-1/2 bg-zinc-800/60 hover:bg-zinc-800/90 text-white p-3 rounded-full shadow-md disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="btn-next" class="absolute right-0 top-1/2 z-20 transform -translate-y-1/2 bg-zinc-800/60 hover:bg-zinc-800/90 text-white p-3 rounded-full shadow-md disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-20 bg-black rounded-t-[40px] shadow-lg">
           <div class="container mx-auto px-4">
             <div class="title-card animate-on-scroll">
               <h2 class="title-card-header">Sobre Nosotros</h2>
@@ -129,124 +235,12 @@
           </div>
         </section>
 
-        <section id="services" class="py-16 md:py-20 bg-black rounded-t-[40px] shadow-lg">
-            <div class="container mx-auto px-4">
-                <div class="title-card animate-on-scroll">
-                    <h2 class="title-card-header">Nuestros Servicios</h2>
-                    <p class="title-card-text">
-                        Descubra cómo podemos construir juntos un camino hacia un futuro con mejores conexiones, adaptadas a su medida.
-                    </p>
-                </div>
-
-                <div id="services-carousel-wrapper" class="relative animate-on-scroll mt-16">
-                    <div id="carousel" class="overflow-hidden">
-                        <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out -mx-3" style="gap: 1.5rem;">
-                            
-                            <!-- Tarjeta de Servicio: Diseño e Infraestructura -->
-                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
-                                <picture>
-                                    <!-- Versión de escritorio WebP -->
-                                    <source media="(min-width: 768px)" srcset="img/design-network-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
-                                    <source srcset="img/design-network-mobile.webp" type="image/webp">
-                                    <!-- La imagen principal solo para navegadores que no soportan <picture> o si las fuentes fallan -->
-                                    <img alt="Imagen de Diseño e Infraestructura" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                </picture>
-                                <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
-                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
-                                    <h3 class="text-2xl font-bold text-white mb-3">Diseño e Infraestructura</h3>
-                                    <p class="text-gray-200 leading-relaxed">Planificamos y desplegamos redes robustas, desde radioenlace y fibra óptica hasta soluciones Cloud, videovigilancia y telefonía IP.</p>
-                                </div>
-                            </div>
-
-                            <!-- Tarjeta de Servicio: Gestión y Optimización -->
-                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
-                                <picture>
-                                    <!-- Versión de escritorio WebP -->
-                                    <source media="(min-width: 768px)" srcset="img/optimization-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
-                                    <source srcset="img/optimization-mobile.webp" type="image/webp">
-                                    <img alt="Imagen de Optimización y Gestión" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                </picture>
-                                <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
-                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
-                                    <h3 class="text-2xl font-bold text-white mb-3">Gestión y Optimización</h3>
-                                    <p class="text-gray-200 leading-relaxed">Configuramos y optimizamos su red para el máximo rendimiento, incluyendo calidad de servicio, balanceo de carga y monitoreo continuo.</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Tarjeta de Servicio: Ciberseguridad -->
-                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
-                                <picture>
-                                    <!-- Versión de escritorio WebP -->
-                                    <source media="(min-width: 768px)" srcset="img/cybersecurity-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
-                                    <source srcset="img/cybersecurity-mobile.webp" type="image/webp">
-                                    <img alt="Imagen de Ciberseguridad" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                </picture>
-                                <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
-                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
-                                    <h3 class="text-2xl font-bold text-white mb-3">Ciberseguridad</h3>
-                                    <p class="text-gray-200 leading-relaxed">Protegemos sus activos digitales contra amenazas, garantizando la confidencialidad, integridad y disponibilidad de su información.</p>
-                                </div>
-                            </div>
-
-                            <!-- Tarjeta de Servicio: Soporte Técnico -->
-                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
-                                <picture>
-                                    <!-- Versión de escritorio WebP -->
-                                    <source media="(min-width: 768px)" srcset="img/tech-support-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
-                                    <source srcset="img/tech-support-mobile.webp" type="image/webp">
-                                    <img alt="Imagen de Soporte Técnico" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                </picture>
-                                <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
-                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
-                                    <h3 class="text-2xl font-bold text-white mb-3">Soporte Técnico</h3>
-                                    <p class="text-gray-200 leading-relaxed">Ofrecemos soporte técnico experto y servicios gestionados con mantenimiento proactivo y resolución de incidentes 24/7.</p>
-                                </div>
-                            </div>
-
-                            <!-- Tarjeta de Servicio: Asesoría y Consultoría -->
-                            <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
-                                <picture>
-                                    <!-- Versión de escritorio WebP -->
-                                    <source media="(min-width: 768px)" srcset="img/consulting-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
-                                    <source srcset="img/consulting-mobile.webp" type="image/webp">
-                                    <img alt="Imagen de Consultoría" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                </picture>
-                                <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
-                                <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full service-card-content">
-                                    <h3 class="text-2xl font-bold text-white mb-3">Asesoría y Consultoría</h3>
-                                    <p class="text-gray-200 leading-relaxed">Le guiamos en la transformación digital, con auditorías, planificación a medida, capacitación y evaluación de nuevas tecnologías.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button id="btn-prev" class="absolute left-0 top-1/2 z-20 transform -translate-y-1/2 bg-zinc-800/60 hover:bg-zinc-800/90 text-white p-3 rounded-full shadow-md disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button id="btn-next" class="absolute right-0 top-1/2 z-20 transform -translate-y-1/2 bg-zinc-800/60 hover:bg-zinc-800/90 text-white p-3 rounded-full shadow-md disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                    </button>
-                </div>
-
-
-                <div class="text-center mt-16 animate-on-scroll">
-                    <a href="#full-services" class="btn-primary-bg hover:btn-primary-hover-bg text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition-all duration-300">
-                        Ver todos los servicios
-                    </a>
-                </div>
-            </div>
-        </section>
 
 
         <section id="hotspots" class="py-16 md:py-20 bg-zinc-900">
             <div class="container mx-auto px-6">
                  <div class="title-card animate-on-scroll">
-                    <h2 class="title-card-header">Soluciones de Hotspot
+                    <h2 class="title-card-header">Soluciones Avanzadas de Hotspot
                         <span class="inline-block align-middle"><i class="fi-br-wifi text-2xl"></i></span>
                     </h2>
                     <p class="title-card-text">Apoyamos su negocio con sistemas Hotspot sencillos de gestionar que ofrecen un acceso seguro y personalizado.</p>
@@ -318,7 +312,7 @@
         <section id="focus" class="py-16 md:py-20 bg-zinc-900">
             <div class="container mx-auto px-6">
                 <div class="title-card animate-on-scroll">
-                    <h2 class="title-card-header">Nuestro Enfoque</h2>
+                    <h2 class="title-card-header">Nuestro Enfoque y Público Objetivo</h2>
                     <p class="title-card-text">Nos dedicamos a abordar los desafíos de conectividad en el Estado Bolívar, trabajando con sectores clave para fomentar su desarrollo.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center mt-16">
@@ -359,7 +353,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                     <div class="content-card animate-on-scroll">
-                        <div class="flex items-center mb-4"><i class="fi-br-pencil-ruler icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Diseño y Despliegue de Redes</h3></div>
+                        <div class="flex items-center mb-4"><i class="fi-br-bezier-curve icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Diseño y Despliegue de Redes</h3></div>
                         <p class="card-text mb-4">Creamos y desplegamos infraestructuras de comunicación robustas y escalables.</p>
                         <ul class="card-list"><li>Redes LAN/WAN.</li><li>Conectividad Inalámbrica Avanzada.</li><li>Infraestructura de Fibra Óptica.</li><li>Servidores y Soluciones Cloud.</li><li>Videovigilancia (CCTV/IP).</li><li>Telefonía IP.</li></ul>
                     </div>
@@ -369,7 +363,7 @@
                         <ul class="card-list"><li>Optimización de Equipos de Red.</li><li>Calidad de Servicio (QoS).</li><li>Segmentación de Red (VLANs).</li><li>Monitoreo y Alertas 24/7.</li><li>Soluciones de Hotspot.</li><li>Mantenimiento Preventivo.</li></ul>
                     </div>
                     <div class="content-card animate-on-scroll" style="transition-delay: 0.2s;">
-                        <div class="flex items-center mb-4"><i class="fi-br-key icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Ciberseguridad</h3></div>
+                        <div class="flex items-center mb-4"><i class="fi-br-shield-check icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Ciberseguridad</h3></div>
                         <p class="card-text mb-4">Protegemos sus activos digitales contra amenazas, garantizando la confidencialidad.</p>
                         <ul class="card-list"><li>Gestión de Firewalls (IPS/IDS).</li><li>Redes Privadas Virtuales (VPNs).</li><li>Respaldo y Recuperación de Datos.</li><li>Seguridad de Endpoints.</li><li>Análisis de Vulnerabilidades.</li><li>Protección contra Ransomware.</li></ul>
                     </div>
@@ -379,12 +373,12 @@
                         <ul class="card-list"><li>Soporte de Infraestructura TI.</li><li>Mantenimiento de Servidores.</li><li>Servicio Remoto y en Campo.</li><li>Soporte Prioritario 24/7.</li><li>Gestión de Incidentes.</li><li>Optimización de Rendimiento.</li></ul>
                     </div>
                     <div class="content-card animate-on-scroll" style="transition-delay: 0.4s;">
-                        <div class="flex items-center mb-4"><i class="fi-br-hand-holding-box icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Consultoría</h3></div>
+                        <div class="flex items-center mb-4"><i class="fi-br-lightbulb icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Consultoría</h3></div>
                         <p class="card-text mb-4">Le brindamos la orientación necesaria para tomar decisiones tecnológicas informadas.</p>
                         <ul class="card-list"><li>Auditorías Completas de Red.</li><li>Diseño de Soluciones a Medida.</li><li>Consultoría en Transformación Digital.</li><li>Capacitación Técnica.</li><li>Evaluación de Tecnologías.</li><li>Desarrollo de Políticas de Seguridad.</li></ul>
                     </div>
                     <div class="content-card animate-on-scroll" style="transition-delay: 0.5s;">
-                        <div class="flex items-center mb-4"><i class="fi-br-satellite-dish icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Satelital</h3></div>
+                        <div class="flex items-center mb-4"><i class="fi-br-satellite icon-color-accent text-3xl mr-4"></i><h3 class="card-title">Satelital</h3></div>
                         <p class="card-text mb-4">Conectividad de alta velocidad y comunicaciones fiables en las zonas más remotas.</p>
                         <ul class="card-list"><li>Instalación Experta Satelital.</li><li>Alineación de Precisión.</li><li>Gestión de Conectividad Starlink.</li><li>Mantenimiento de Equipos.</li><li>Aseguramos la Continuidad Operativa.</li><li>Soluciones para Zonas Aisladas.</li></ul>
                     </div>
@@ -412,7 +406,7 @@
         </section>
     </main>
 
-    <div id="floating-contact-button" class="floating-contact-button">
+    <div id="floating-contact-button" class="floating-contact-button opacity-0 pointer-events-none">
         <a href="#contact" class="btn-primary-bg hover:btn-primary-hover-bg text-white rounded-full shadow-lg p-4 transition-all duration-300 flex items-center justify-center">
             <i class="fi-br-messages text-2xl"></i>
         </a>
