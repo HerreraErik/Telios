@@ -1,4 +1,4 @@
-/* input.css - Este es tu archivo CSS de entrada para Tailwind */
+/* input.css - Archivo de entrada para Tailwind CSS */
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -608,8 +608,20 @@ video {
   inset: 0px;
 }
 
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
 }
 
 .z-0 {
@@ -636,13 +648,24 @@ video {
   float: right;
 }
 
+.-mx-3 {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -669,10 +692,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .ml-auto {
   margin-left: auto;
 }
@@ -681,12 +700,28 @@ video {
   margin-right: 0.5rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .mt-4 {
@@ -695,10 +730,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.box-border {
-  box-sizing: border-box;
 }
 
 .block {
@@ -721,6 +752,14 @@ video {
   display: none;
 }
 
+.aspect-\[9\/16\] {
+  aspect-ratio: 9/16;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -729,12 +768,12 @@ video {
   height: 3rem;
 }
 
-.h-7 {
-  height: 1.75rem;
+.h-6 {
+  height: 1.5rem;
 }
 
-.h-72 {
-  height: 18rem;
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-8 {
@@ -743,6 +782,14 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-7 {
@@ -757,16 +804,16 @@ video {
   width: 100%;
 }
 
-.min-w-full {
-  min-width: 100%;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
-}
-
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .flex-shrink-0 {
@@ -775,6 +822,19 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-2 {
@@ -817,22 +877,14 @@ video {
   gap: 1.5rem;
 }
 
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -853,6 +905,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-\[40px\] {
+  border-radius: 40px;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -865,14 +921,19 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-b-\[40px\] {
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.rounded-t-\[40px\] {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
 }
 
 .bg-violet-600 {
@@ -880,9 +941,13 @@ video {
   background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
 }
 
-.bg-zinc-100 {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-zinc-800\/60 {
+  background-color: rgb(39 39 42 / 0.6);
 }
 
 .bg-zinc-900 {
@@ -890,9 +955,17 @@ video {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
 }
 
+.bg-opacity-60 {
+  --tw-bg-opacity: 0.6;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-4 {
@@ -947,12 +1020,16 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.text-left {
-  text-align: left;
+.\!text-left {
+  text-align: left !important;
 }
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-2xl {
@@ -1022,6 +1099,16 @@ video {
   letter-spacing: 0.05em;
 }
 
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+}
+
+.text-indigo-400 {
+  --tw-text-opacity: 1;
+  color: rgb(129 140 248 / var(--tw-text-opacity, 1));
+}
+
 .text-slate-300 {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity, 1));
@@ -1042,14 +1129,34 @@ video {
   color: rgb(51 65 85 / var(--tw-text-opacity, 1));
 }
 
-.text-slate-800 {
+.text-violet-400 {
   --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity, 1));
+  color: rgb(167 139 250 / var(--tw-text-opacity, 1));
+}
+
+.text-violet-500 {
+  --tw-text-opacity: 1;
+  color: rgb(139 92 246 / var(--tw-text-opacity, 1));
+}
+
+.text-violet-600 {
+  --tw-text-opacity: 1;
+  color: rgb(124 58 237 / var(--tw-text-opacity, 1));
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-zinc-200 {
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+}
+
+.text-zinc-300 {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity, 1));
 }
 
 .text-zinc-400 {
@@ -1061,12 +1168,14 @@ video {
   opacity: 0;
 }
 
-.opacity-60 {
-  opacity: 0.6;
-}
-
 .opacity-70 {
   opacity: 0.7;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg {
@@ -1087,8 +1196,20 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .transition-all {
   transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-opacity {
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1109,6 +1230,10 @@ video {
   transition-duration: 300ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .duration-700 {
   transition-duration: 700ms;
 }
@@ -1117,154 +1242,176 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- A partir de aquí, pega todo el contenido de tu style.css anterior --- */
+/* --- Estilos personalizados --- */
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fafafa;
-  /* zinc-50 - Casi blanco, base para fondos */
-  color: #27272a;
-  /* zinc-800 */
+  /* Los colores de fondo y texto se establecen con clases de Tailwind en el body */
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* La imagen de fondo de hero ahora se maneja directamente en el HTML con <picture> */
+/* Fondo y superposición de la sección Hero */
 
 .hero-bg {
-  background-color: #1A0026;
-  /* Darker shade of new base color */
-  color: #fafafa;
-  /* zinc-50 */
   position: relative;
   overflow: hidden;
-  /* background-image: url('img/hero-background.jpg'); ELIMINADO */
-  background-size: cover;
-  /* Mantenido para el contenido si se superpone */
-  background-position: center;
-  /* Mantenido para el contenido si se superpone */
 }
-
-/* Esta superposición ahora se aplica a un div separado para la imagen del hero */
 
 .hero-overlay {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(26, 0, 38, 0.7);
-  /* Darker shade of new base color with 70% opacity */
-  opacity: 0.5;
-  /* Adjusted to 50% de opacidad para que el fondo sea más visible */
-  z-index: 1;
+  /* La opacidad y color se definen en las clases de Tailwind */
 }
 
-#hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Nueva paleta de colores basada en #8e22bb */
-
-/* Colores de texto ahora neutros */
-
-.brand-primary-text {
-  color: #2C3E50;
-}
-
-/* Dark Slate Gray */
-
-.brand-secondary-text {
-  color: #7F8C8D;
-}
-
-/* Asbestos */
-
-/* Colores de botones de contacto unificados con la paleta principal */
-
-.accent-brown-bg {
-  background-color: #8e22bb;
-}
-
-/* New base color for Email */
-
-.accent-green-bg {
-  background-color: #8e22bb;
-}
-
-/* New base color for WhatsApp */
+/* Paleta de colores consistente */
 
 .header-footer-bg {
   background-color: #1A0026;
 }
 
-/* Very dark purple */
-
-.card-bg {
-  background-color: #ffffff;
-}
-
-/* white */
-
-/* Colores para botones principales y elementos interactivos (Violeta) */
+/* Morado muy oscuro */
 
 .btn-primary-bg {
   background-color: #8e22bb;
 }
 
-/* New base color */
-
 .btn-primary-hover-bg {
   background-color: #6A1A8C;
 }
-
-/* Slightly darker new base color */
-
-/* Color para la sección de garantía (Violeta más oscuro para destacar) */
 
 .guarantee-bg {
   background-color: #5B007A;
 }
 
-/* Darker new base color */
-
-/* Color para iconos y elementos con acento (ahora el color principal morado) */
+.accent-violet-bg {
+  background-color: #8e22bb;
+}
 
 .icon-color-accent {
-  color: #8e22bb;
+  color: #a78bfa;
 }
 
-/* Morado de acento */
+/* Violeta claro para acentos en tema oscuro */
 
-/* Color para el checkmark en listas (ahora el color principal morado) */
-
-.service-slide-content li::before {
-  color: #8e22bb;
-  /* Morado de acento */
+.card-bg-light {
+  background-color: #1F1F2E;
 }
 
-/* Fondo para secciones claras (ahora con un toque de morado muy sutil) */
-
-.bg-zinc-100 {
-  /* Renombrado de bg-slate-100 para ser más genérico y menos "gris" */
-  background-color: #F9F5FC;
-  /* Un blanco muy claro con un toque de morado */
-}
+/* Nuevo color para las tarjetas */
 
 .nav-link {
-  transition: color 0.3s, border-bottom-color 0.3s, opacity 0.3s, pointer-events 0.3s;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #D0A0E0;
-  /* Lighter neutral/purple for hover */
+  color: #c4b5fd;
+  /* Violeta más claro para hover */
 }
 
-/* Chart.js styles */
+/* Estilos de las tarjetas generales y títulos */
+
+.title-card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56rem;
+  border-radius: 40px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
+  padding: 2rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.title-card-header {
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .title-card-header {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.title-card-text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(237 233 254 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 768px) {
+  .title-card-text {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.content-card {
+  border-radius: 30px;
+  padding: 1.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background-color: #1F1F2E;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(167 139 250 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.card-text {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity, 1));
+}
+
+.card-list {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.card-list > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.card-list {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity, 1));
+}
+
+.feature-icon {
+  margin-right: 1rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
+  padding: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+/* Estilos del Gráfico (Chart.js) */
 
 .chart-container {
   position: relative;
@@ -1273,7 +1420,6 @@ h1, h2, h3, h4 {
   margin-left: auto;
   margin-right: auto;
   height: 300px;
-  max-height: 350px;
 }
 
 @media (min-width: 768px) {
@@ -1282,13 +1428,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Hotspot Gallery styles */
-
-#hotspot-image-gallery {
-  min-height: 300px;
-}
-
-/* Las imágenes ahora están dentro de <picture>, así que el estilo se aplica a <picture> */
+/* Galería de Hotspot */
 
 .hotspot-gallery-img {
   position: absolute;
@@ -1296,13 +1436,12 @@ h1, h2, h3, h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   opacity: 0;
   filter: blur(8px);
   transform: scale(1.1) rotate(5deg);
   transition: opacity 0.8s ease-in-out, filter 0.8s ease-in-out, transform 0.8s ease-in-out;
   border-radius: 0.5rem;
+  /* 8px */
 }
 
 .hotspot-gallery-img.active {
@@ -1319,6 +1458,8 @@ h1, h2, h3, h4 {
   z-index: 5;
 }
 
+/* Animaciones al hacer scroll */
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
@@ -1330,6 +1471,8 @@ h1, h2, h3, h4 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Botones de contacto circulares */
 
 .contact-circle-button {
   display: flex;
@@ -1351,243 +1494,46 @@ h1, h2, h3, h4 {
 
 .contact-circle-button span.text-2xl {
   margin-bottom: 0.5rem;
+  /* 8px */
 }
 
 .contact-circle-button .button-text {
   font-size: 0.9rem;
 }
 
-#services-carousel-wrapper {
-  /* No specific styles needed here, mainly for positioning */
+/* Carrusel de Servicios */
+
+/* La estructura ahora usa gap en el contenedor flex, por lo que no se necesita CSS complejo */
+
+#carousel-inner {
+  /* Clases de Tailwind manejan el layout */
 }
 
-#services-carousel {
-  height: 650px;
-  /* Altura fija para escritorio, aumentada para más espacio */
-  overflow: hidden;
-  /* Asegura que no haya scrollbar en el carrusel principal */
+/* Sombra de texto para legibilidad en tarjetas de servicio */
+
+.service-card-content h3, .service-card-content p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
-@media (max-width: 767px) {
-  /* Para móvil */
-
-  #services-carousel {
-    height: 550px;
-    /* Altura ajustada para móvil (relación 3:4 para un ancho común) */
-  }
-}
-
-/* El slide ahora contiene la imagen y la superposición dentro */
-
-.service-slide {
-  /* Removed min-w-full; as it's a Tailwind class and should be in HTML */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  padding: 2rem;
-  height: 100%;
-  /* Asegura que el slide ocupe la altura de su contenedor */
-  box-sizing: border-box;
-}
-
-/* Estilo para la etiqueta <picture> dentro de service-slide para que la imagen cubra todo */
-
-.service-slide-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* Asegura que la imagen cubra el área sin distorsionarse */
-  z-index: 0;
-  /* Asegura que esté detrás del contenido y el overlay */
-  border-radius: 0.5rem;
-  /* Hereda el border-radius del contenedor principal del carrusel */
-}
-
-/* Esta superposición ahora se aplica a un div separado dentro del slide */
-
-.service-slide-overlay {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-  border-radius: 0.5rem;
-}
-
-.service-slide-content {
-  position: relative;
-  z-index: 2;
-  max-width: 95%;
-  /* Ocupa más espacio en móvil y escritorio */
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* Centrado verticalmente para móvil */
-  align-items: center;
-  /* Centrado horizontalmente para móvil */
-  text-align: center;
-  /* Centrado texto para móvil */
-  /* Eliminado overflow-y: auto para evitar scrollbar en las tarjetas */
-  box-sizing: border-box;
-  padding: 2.5rem;
-  /* Padding para móvil */
-  /* Las propiedades de tarjeta se mueven a la media query de escritorio */
-}
-
-@media (min-width: 768px) {
-  /* Para escritorio */
-
-  .service-slide-content {
-    justify-content: flex-start;
-    /* Alinea el contenido a la parte superior */
-    align-items: flex-start;
-    /* Alinea el contenido a la izquierda */
-    text-align: left;
-    /* Alinea el texto a la izquierda */
-    padding: 2.5rem 4rem 4rem 4rem;
-    /* Reducido padding-top, mantenido otros */
-    background-color: rgba(142, 34, 187, 0.3);
-    /* Fondo semitransparente para la tarjeta, opacidad reducida */
-    border-radius: 0.75rem;
-    /* Bordes redondeados para la tarjeta */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-    /* Sombra para la tarjeta */
-  }
-
-  .service-slide-content h3 {
-    font-size: 2.25rem;
-    /* Ajustado para evitar superposición y ser más pequeño en escritorio */
-    line-height: 1.3;
-    /* Ajustado para evitar superposición */
-    margin-bottom: 1.5rem;
-    /* Ajustado para evitar superposición */
-  }
-
-  .service-slide-content ul {
-    font-size: 1.15rem;
-    /* Ajustado para evitar superposición */
-    line-height: 1.7;
-    /* Ajustado para evitar superposición */
-  }
-
-  .service-slide-content li {
-    margin-bottom: 0.75rem;
-    /* Ajustado para evitar superposición */
-  }
-}
-
-/* Ajustes para la forma de 'T' en móvil */
-
-@media (max-width: 767px) {
-  .service-slide-content ul {
-    max-width: 80%;
-    /* Hace que la lista sea más estrecha que el título */
-    margin: 0 auto;
-    /* Centra la lista */
-  }
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 0.75rem 1rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  z-index: 30;
-  transition: background-color 0.3s, opacity 0.3s;
-}
-
-.carousel-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-#prev-slide {
-  left: 1rem;
-}
-
-#next-slide {
-  right: 1rem;
-}
-
-.carousel-pagination-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #C0C0C0;
-  /* Neutral dot */
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.carousel-pagination-dot.active {
-  background-color: #8e22bb;
-  /* New base color for active dot */
-  transform: scale(1.2);
-}
-
-/* Estilos para el botón de contacto flotante en móvil */
+/* Botón flotante de contacto */
 
 #floating-contact-button {
   position: fixed;
   bottom: 1.5rem;
-  /* 24px del borde inferior */
+  /* 24px */
   right: 1.5rem;
-  /* 24px del borde derecho */
+  /* 24px */
   z-index: 999;
-  /* Asegura que esté por encima de la mayoría de los elementos */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  /* Oculto por defecto en desktop */
-  display: flex;
-  /* Mostrar como flexbox para centrar el icono */
-  /* Eliminamos los estilos de depuración */
-  /* background-color: rgba(255, 0, 0, 0.8); */
-  /* border: 3px solid blue; */
-  border-radius: 50%;
-  /* Asegura que el contenedor también sea circular */
-  width: 56px;
-  /* Asegura que el contenedor tenga el mismo tamaño */
-  height: 56px;
 }
 
 #floating-contact-button a {
-  width: 100%;
-  /* El enlace ocupa todo el contenedor */
-  height: 100%;
-  /* El enlace ocupa todo el contenedor */
-  font-size: 1.5rem;
-  /* Tamaño del icono */
-  /* Aseguramos que la burbuja sea visible con un color de fondo y forma */
-  background-color: #8e22bb;
-  /* Color de fondo explícito */
-  border-radius: 50%;
-  /* Forma circular explícita */
   display: flex;
-  /* Para centrar el icono dentro de la burbuja */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  /* Aseguramos que esté por encima de todo */
-  /* Eliminamos los estilos de depuración */
-  /* border: 2px solid yellow; */
+  width: 56px;
+  height: 56px;
 }
-
-/* Ocultar en desktop */
 
 @media (min-width: 768px) {
   #floating-contact-button {
@@ -1603,6 +1549,15 @@ h1, h2, h3, h4 {
 .hover\:bg-violet-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(109 40 217 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-zinc-800\/90:hover {
+  background-color: rgb(39 39 42 / 0.9);
+}
+
+.hover\:text-violet-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(91 33 182 / var(--tw-text-opacity, 1));
 }
 
 .hover\:shadow-lg:hover {
@@ -1622,9 +1577,27 @@ h1, h2, h3, h4 {
   outline-offset: 2px;
 }
 
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
+.disabled\:opacity-30:disabled {
+  opacity: 0.3;
+}
+
+.group:hover .group-hover\:scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @media (min-width: 640px) {
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
   }
 
   .sm\:grid-cols-3 {
@@ -1637,33 +1610,20 @@ h1, h2, h3, h4 {
 }
 
 @media (min-width: 768px) {
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:mb-0 {
     margin-bottom: 0px;
-  }
-
-  .md\:mb-16 {
-    margin-bottom: 4rem;
   }
 
   .md\:flex {
     display: flex;
   }
 
-  .md\:grid {
-    display: grid;
-  }
-
   .md\:hidden {
     display: none;
   }
 
-  .md\:h-96 {
-    height: 24rem;
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
 
   .md\:grid-cols-2 {
@@ -1688,13 +1648,14 @@ h1, h2, h3, h4 {
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
 
-  .md\:p-8 {
-    padding: 2rem;
-  }
-
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .md\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .md\:py-32 {
@@ -1706,29 +1667,19 @@ h1, h2, h3, h4 {
     text-align: left;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
+  .md\:text-5xl {
+    font-size: 3rem;
     line-height: 1;
   }
 
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .md\:text-xl {
@@ -1738,7 +1689,20 @@ h1, h2, h3, h4 {
 }
 
 @media (min-width: 1024px) {
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
