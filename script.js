@@ -38,23 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
     animateOnScrollElements.forEach(element => observer.observe(element));
 
     // Logic to show/hide the "Contact" link in the header for desktop/mobile
-    // This link should be hidden when the hero section is visible, and appear when scrolled past it.
     const heroSection = document.getElementById('hero');
     const contactNavLink = document.getElementById('contact-nav-link'); // Desktop header link
     const contactMobileNavLink = document.getElementById('contact-mobile-nav-link'); // Mobile header link
     if (heroSection && contactNavLink && contactMobileNavLink) {
         const heroSectionObserver = new IntersectionObserver((entries) => {
             const isIntersecting = entries[0].isIntersecting;
-            
-            // If the hero section is intersecting (visible), hide the contact links.
-            // If the hero section is NOT intersecting (scrolled past), show the contact links.
             contactNavLink.classList.toggle('opacity-0', isIntersecting);
             contactNavLink.classList.toggle('pointer-events-none', isIntersecting);
-            
-            // Apply the same logic for the mobile contact link in the header menu
             contactMobileNavLink.classList.toggle('opacity-0', isIntersecting);
             contactMobileNavLink.classList.toggle('pointer-events-none', isIntersecting);
-        }, { threshold: 0.1, rootMargin: "-100px 0px 0px 0px" }); // Adjust rootMargin if needed for earlier/later trigger
+        }, { threshold: 0.1, rootMargin: "-100px 0px 0px 0px" });
         heroSectionObserver.observe(heroSection);
     }
     
@@ -64,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // --- Services Carousel Logic (New & Improved) ---
+    // --- Services Carousel Logic (REVISED) ---
     const carouselWrapper = document.getElementById('services-carousel-wrapper');
     if (carouselWrapper) {
         const carousel = document.getElementById('carousel');
@@ -75,54 +69,101 @@ document.addEventListener('DOMContentLoaded', function() {
         let touchEndX = 0;
 
         if (carousel && inner && prevBtn && nextBtn) {
-            let cards = [...inner.children];
+            const cards = [...inner.children];
             let currentIndex = 0;
-
-            const updateCarousel = () => {
+            
+            const updateCarousel = (isResize = false) => {
                 if (cards.length === 0) return;
-                const cardWidth = cards[0].offsetWidth;
-                const gap = parseFloat(window.getComputedStyle(inner).gap) || 0;
-                const totalCardWidth = cardWidth + gap;
-                
-                // Calculate the offset to center the cards in mobile view
-                const containerPadding = parseFloat(window.getComputedStyle(carousel.parentElement).paddingLeft) || 0;
-                const carouselOffset = (carousel.offsetWidth - cardWidth) / 2 - containerPadding;
 
-
-                if (window.innerWidth < 640) { // Mobile view specific centering
-                    inner.style.transform = `translateX(${-currentIndex * totalCardWidth + carouselOffset}px)`;
-                } else { // Desktop view
-                    inner.style.transform = `translateX(-${currentIndex * totalCardWidth}px)`;
+                // On resize, reset to the first slide to avoid positioning issues.
+                if (isResize) {
+                    currentIndex = 0;
                 }
                 
-                // Update button visibility/state
-                prevBtn.disabled = currentIndex === 0;
-                
-                const visibleAreaWidth = carousel.offsetWidth;
-                const remainingWidth = (inner.scrollWidth - (currentIndex * totalCardWidth)) - visibleAreaWidth;
-                nextBtn.disabled = remainingWidth <= cardWidth/2; // Disable if less than half a card is left
+                let offset = 0;
+
+                // --- CENTERING LOGIC ---
+                if (window.innerWidth < 768) { // Mobile view: Center the card
+                    const targetCard = cards[currentIndex];
+                    if (!targetCard) return;
+
+                    const containerCenter = carousel.offsetWidth / 2;
+                    const cardCenter = targetCard.offsetLeft + (targetCard.offsetWidth / 2);
+                    const gap = parseFloat(window.getComputedStyle(inner).gap) || 0; // Get the gap value
+                    
+                    // This new calculation directly aligns the center of the card
+                    // with the center of the container, taking into account the margin for precise centering.
+                    offset = containerCenter - cardCenter + (gap / 2); // Adjustment here for centering
+
+                } else { // Desktop view: Align to left
+                    const cardWidth = cards[0].offsetWidth;
+                    const gap = parseFloat(window.getComputedStyle(inner).gap) || 0;
+                    const totalCardWidth = cardWidth + gap;
+                    offset = -currentIndex * totalCardWidth;
+                    
+                    // On desktop, we must ensure we don't scroll past the last item.
+                    const containerWidth = carousel.offsetWidth;
+                    const scrollWidth = inner.scrollWidth;
+                    const currentScroll = Math.abs(parseFloat(inner.style.transform.split('(')[1])) || 0;
+                    
+                    // Disable if the remaining scrollable width is less than a pixel.
+                    nextBtn.disabled = (scrollWidth - currentScroll) <= containerWidth + 1;
+                }
+
+                inner.style.transform = `translateX(${offset}px)`;
+                updateButtons();
             };
 
+            const updateButtons = () => {
+                if (cards.length === 0) {
+                    prevBtn.disabled = true;
+                    nextBtn.disabled = true;
+                    return;
+                }
+
+                // Previous button is simple: disabled at index 0.
+                prevBtn.disabled = currentIndex <= 0;
+                
+                let maxIndex;
+                if (window.innerWidth < 768) { // Mobile: One card per view.
+                    maxIndex = cards.length - 1;
+                    nextBtn.disabled = currentIndex >= maxIndex;
+                } else { // Desktop: Check if end of scroll is reached.
+                    const containerWidth = carousel.offsetWidth;
+                    const scrollWidth = inner.scrollWidth;
+                    const currentScroll = Math.abs(parseFloat(inner.style.transform.split('(')[1])) || 0;
+                    
+                    // Disable if the remaining scrollable width is less than a pixel.
+                    nextBtn.disabled = (scrollWidth - currentScroll) <= containerWidth + 1;
+                }
+            };
+            
             const slideNext = () => {
-                currentIndex++;
-                updateCarousel();
+                if (!nextBtn.disabled) {
+                    currentIndex++;
+                    updateCarousel();
+                }
             };
 
             const slidePrev = () => {
-                if (currentIndex > 0) {
+                if (!prevBtn.disabled) {
                     currentIndex--;
                     updateCarousel();
                 }
             };
             
             const handleSwipe = () => {
-                if (touchStartX - touchEndX > 75) { // Swiped left
+                // Swipe left
+                if (touchStartX - touchEndX > 50) {
                     slideNext();
-                } else if (touchEndX - touchStartX > 75) { // Swiped right
+                } 
+                // Swipe right
+                else if (touchEndX - touchStartX > 50) {
                    slidePrev();
                 }
-            }
+            };
 
+            // Event Listeners
             nextBtn.addEventListener('click', slideNext);
             prevBtn.addEventListener('click', slidePrev);
             
@@ -132,13 +173,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 handleSwipe();
             });
 
-            // Re-calculate on resize and load
-            window.addEventListener('resize', () => {
-                // Reset to first slide on resize to avoid weird positioning
-                currentIndex = 0;
-                updateCarousel();
+            // Recalculate on resize.
+            window.addEventListener('resize', () => updateCarousel(true));
+            
+            // Use window.load to ensure images and styles are loaded for correct width calculation.
+            window.addEventListener('load', () => {
+                setTimeout(() => updateCarousel(false), 100); // Small delay for rendering.
             });
-            window.addEventListener('load', updateCarousel); // Initial calculation
         }
     }
 
@@ -216,19 +257,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const floatingContactButton = document.getElementById('floating-contact-button');
     const contactSection = document.getElementById('contact');
     
-    // Only if the elements exist, the logic is added
     if (floatingContactButton && heroSection && contactSection) {
         const handleFloatingButtonVisibility = () => {
             const heroRect = heroSection.getBoundingClientRect();
             const contactRect = contactSection.getBoundingClientRect();
             
-            // Determine if the user has scrolled past the hero section
-            // and if the contact section has not fully entered the view
-            const scrolledPastHero = heroRect.bottom < 0; // When the bottom of the hero is out of screen (above)
-            const beforeContact = contactRect.top > window.innerHeight; // When the top of contact is out of screen (below)
+            const scrolledPastHero = heroRect.bottom < 0;
+            const beforeContact = contactRect.top > window.innerHeight;
             
-            // The floating button should only appear on small screens (less than 768px)
-            // and only when the hero section has been passed and the contact section has not yet been reached.
             if (window.innerWidth < 768 && scrolledPastHero && beforeContact) {
                 floatingContactButton.classList.remove('opacity-0', 'pointer-events-none');
             } else {
@@ -236,11 +272,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        // Listen for scroll and resize events to update button visibility
         window.addEventListener('scroll', handleFloatingButtonVisibility);
         window.addEventListener('resize', handleFloatingButtonVisibility);
-        
-        // Execute the function once on load to set the correct initial state
         handleFloatingButtonVisibility();
     }
 });

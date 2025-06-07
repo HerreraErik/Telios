@@ -1004,11 +1004,6 @@ video {
   padding-right: 1rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1086,6 +1081,16 @@ video {
   line-height: 1.75rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1119,11 +1124,6 @@ video {
   color: rgb(167 139 250 / var(--tw-text-opacity, 1));
 }
 
-.text-accent-primary {
-  --tw-text-opacity: 1;
-  color: rgb(142 34 187 / var(--tw-text-opacity, 1));
-}
-
 .text-accent-secondary {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity, 1));
@@ -1151,10 +1151,6 @@ video {
 
 .opacity-0 {
   opacity: 0;
-}
-
-.opacity-70 {
-  opacity: 0.7;
 }
 
 .shadow-2xl {
@@ -1345,14 +1341,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-icon {
+  /* INICIO DE MODIFICACION */
+  /* Asegura que el contenido use flexbox para centrado */
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  width: 56px;
+  /* Define un ancho fijo para el círculo */
+  height: 56px;
+  /* Define un alto fijo para el círculo */
   margin-right: 1rem;
   flex-shrink: 0;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(142 34 187 / var(--tw-bg-opacity, 1));
-  padding: 0.75rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  /* FIN DE MODIFICACION */
 }
 
 /* Estilos del Gráfico (Chart.js) */
@@ -1437,12 +1444,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-circle-button span.text-2xl {
-  margin-bottom: 0.5rem;
-  /* 8px */
+  margin-bottom: 0;
+  /* Elimina el margen inferior si se centrará un solo elemento */
 }
 
 .contact-circle-button .button-text {
-  font-size: 0.9rem;
+  display: none;
+  /* Oculta el texto */
 }
 
 /* Carrusel de Servicios */
