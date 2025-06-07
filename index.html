@@ -11,23 +11,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-</head>
-<body class="bg-zinc-900 text-zinc-300">
 
-    <header class="header-footer-bg text-white p-4 sticky top-0 z-50 shadow-lg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-accent-primary text-text-light">
+
+    <header class="bg-header-footer text-white p-4 sticky top-0 z-50 shadow-lg">
         <nav class="container mx-auto flex items-center">
             <a href="#hero" class="text-2xl font-black tracking-wider flex items-center" style="font-family: 'Montserrat', sans-serif;">
                 <img class="h-10 mr-2 rounded" src="img/logo.svg" alt="Telios Connect Logo">
                 Telios Connect</a>
             <div class="hidden md:flex flex-grow justify-end space-x-6">
-                <a href="#about" class="nav-link font-semibold flex-shrink-0 py-2">Nosotros</a>
                 <a href="#services" class="nav-link font-semibold flex-shrink-0 py-2">Servicios</a>
+                <a href="#about" class="nav-link font-semibold flex-shrink-0 py-2">Nosotros</a>
                 <a href="#hotspots" class="nav-link font-semibold flex-shrink-0 py-2">Hotspots</a>
                 <a href="#satellital-solutions" class="nav-link font-semibold flex-shrink-0 py-2">Satelitales</a>
                 <a href="#focus" class="nav-link font-semibold flex-shrink-0 py-2">Nuestro Enfoque</a>
-                <a href="#contact" id="contact-nav-link" class="nav-link font-semibold px-4 py-2 rounded-md bg-violet-600 hover:bg-violet-700 text-white opacity-0 pointer-events-none">Contacto</a>
+                <a href="#contact" id="contact-nav-link" class="nav-link font-semibold px-4 py-2 rounded-md btn-primary hover:btn-primary-hover text-white opacity-0 pointer-events-none">Contacto</a>
             </div>
             <div class="md:hidden ml-auto">
                 <button id="menu-btn" class="text-white focus:outline-none">
@@ -40,37 +41,39 @@
             <a href="#services" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Servicios</a>
             <a href="#hotspots" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Satelitales</a>
             <a href="#focus" class="block py-2 px-4 text-sm hover:bg-slate-700 rounded">Nuestro Enfoque</a>
-            <a href="#contact" id="contact-mobile-nav-link" class="block py-2 px-4 text-sm rounded-md bg-violet-600 hover:bg-violet-700 text-white opacity-0 pointer-events-none">Contacto</a>
+            <a href="#contact" id="contact-mobile-nav-link" class="block py-2 px-4 text-sm rounded-md btn-primary hover:btn-primary-hover text-white opacity-0 pointer-events-none">Contacto</a>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="hero-bg py-24 md:py-32 relative overflow-hidden">
+        <section id="hero" class="hero-bg py-24 md:py-32 relative overflow-hidden max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8">
             <picture class="absolute inset-0 w-full h-full object-cover z-0">
                 <source media="(min-width: 768px)" srcset="img/hero-background-desktop.webp" type="image/webp">
                 <img src="img/hero-background-mobile.webp" alt="Fondo de Operaciones Críticas" class="w-full h-full object-cover">
             </picture>
-            <div class="hero-overlay absolute inset-0 bg-zinc-900 opacity-70 z-10"></div>
-            <div class="container mx-auto px-6 text-center relative z-20">
+            <div class="hero-overlay absolute inset-0 bg-primary opacity-70 z-10"></div>
+            <div class="container mx-auto text-center relative z-20">
                 <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 text-white animate-on-scroll">Soluciones de Conectividad para Operaciones Críticas</h1>
-                <p class="max-w-4xl mx-auto text-lg md:text-xl text-slate-300 mb-10 animate-on-scroll" style="transition-delay: 0.2s;">
+                <p class="max-w-4xl mx-auto text-lg md:text-xl text-text-light mb-10 animate-on-scroll" style="transition-delay: 0.2s;">
                     Enfocados en la conectividad para entornos complejos, ofrecemos soluciones de redes y telecomunicaciones diseñadas para operar donde otros no pueden. Nuestro compromiso es asegurar la continuidad y eficiencia de sus operaciones, afrontando juntos los desafíos geográficos.
                 </p>
-                <a href="#contact" id="hero-contact-button" class="btn-primary-bg hover:btn-primary-hover-bg text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition-all duration-300 animate-on-scroll" style="transition-delay: 0.4s;">
+                <a href="#contact" id="hero-contact-button" class="btn-primary hover:btn-primary-hover text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition-all duration-300 animate-on-scroll" style="transition-delay: 0.4s;">
                     Solicitar Asesoría
                 </a>
             </div>
         </section>
 
-        <section id="guarantee" class="py-10 guarantee-bg text-white text-center rounded-b-[40px] shadow-lg">
-            <div class="container mx-auto px-6 flex items-center justify-center gap-4">
+        <!-- Guarantee Section -->
+        <section id="guarantee" class="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-10 bg-dark text-white text-center rounded-b-[40px] shadow-lg">
+            <div class="container mx-auto flex items-center justify-center gap-4">
                 <i class="fi-br-badge text-4xl"></i>
                 <p class="text-lg md:text-xl font-semibold">¡Tu satisfacción es nuestra prioridad! Ofrecemos una garantía de 30 días en todos nuestros servicios.</p>
             </div>
         </section>
 
-        <section id="services" class="py-16 md:py-24 bg-zinc-900">
-            <div class="container mx-auto px-4">
+        <!-- Services Section -->
+        <section id="services" class="my-8 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24 bg-primary rounded-t-[40px] rounded-b-[40px] shadow-lg">
+            <div class="container mx-auto">
                 <div class="title-card animate-on-scroll">
                     <h2 class="title-card-header">Nuestros Servicios</h2>
                     <p class="title-card-text">
@@ -82,14 +85,11 @@
                     <div id="carousel" class="overflow-hidden">
                         <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out -mx-3" style="gap: 1.5rem;">
                             
-                            <!-- Tarjeta de Servicio: Diseño e Infraestructura -->
+                            <!-- Service Card: Design and Infrastructure -->
                             <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
                                 <picture>
-                                    <!-- Versión de escritorio WebP -->
                                     <source media="(min-width: 768px)" srcset="img/design-network-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
                                     <source srcset="img/design-network-mobile.webp" type="image/webp">
-                                    <!-- La imagen principal solo para navegadores que no soportan <picture> o si las fuentes fallan -->
                                     <img alt="Imagen de Diseño e Infraestructura" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                                 </picture>
                                 <div class="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -99,12 +99,10 @@
                                 </div>
                             </div>
 
-                            <!-- Tarjeta de Servicio: Gestión y Optimización -->
+                            <!-- Service Card: Management and Optimization -->
                             <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
                                 <picture>
-                                    <!-- Versión de escritorio WebP -->
                                     <source media="(min-width: 768px)" srcset="img/optimization-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
                                     <source srcset="img/optimization-mobile.webp" type="image/webp">
                                     <img alt="Imagen de Optimización y Gestión" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                                 </picture>
@@ -115,12 +113,10 @@
                                 </div>
                             </div>
                             
-                            <!-- Tarjeta de Servicio: Ciberseguridad -->
+                            <!-- Service Card: Cybersecurity -->
                             <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
                                 <picture>
-                                    <!-- Versión de escritorio WebP -->
                                     <source media="(min-width: 768px)" srcset="img/cybersecurity-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
                                     <source srcset="img/cybersecurity-mobile.webp" type="image/webp">
                                     <img alt="Imagen de Ciberseguridad" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                                 </picture>
@@ -131,12 +127,10 @@
                                 </div>
                             </div>
 
-                            <!-- Tarjeta de Servicio: Soporte Técnico -->
+                            <!-- Service Card: Technical Support -->
                             <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
                                 <picture>
-                                    <!-- Versión de escritorio WebP -->
                                     <source media="(min-width: 768px)" srcset="img/tech-support-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
                                     <source srcset="img/tech-support-mobile.webp" type="image/webp">
                                     <img alt="Imagen de Soporte Técnico" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                                 </picture>
@@ -147,12 +141,10 @@
                                 </div>
                             </div>
 
-                            <!-- Tarjeta de Servicio: Asesoría y Consultoría -->
+                            <!-- Service Card: Advice and Consulting -->
                             <div class="service-card flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 relative aspect-[9/16] rounded-[40px] overflow-hidden shadow-2xl group mx-3">
                                 <picture>
-                                    <!-- Versión de escritorio WebP -->
                                     <source media="(min-width: 768px)" srcset="img/consulting-desktop.webp" type="image/webp">
-                                    <!-- Versión móvil WebP -->
                                     <source srcset="img/consulting-mobile.webp" type="image/webp">
                                     <img alt="Imagen de Consultoría" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                                 </picture>
@@ -172,11 +164,19 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                     </button>
                 </div>
+
+                <!-- "Más Información" Button -->
+                <div class="mt-16 text-center">
+                    <a href="#full-services" class="btn-primary hover:btn-primary-hover text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transition-all duration-300 inline-block">
+                        Más Información
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="py-16 md:py-20 bg-black rounded-t-[40px] shadow-lg">
-          <div class="container mx-auto px-4">
+        <!-- About Section -->
+        <section id="about" class="my-8 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-20 bg-dark rounded-t-[40px] rounded-b-[40px] shadow-lg">
+          <div class="container mx-auto">
             <div class="title-card animate-on-scroll">
               <h2 class="title-card-header">Sobre Nosotros</h2>
               <p class="title-card-text">
@@ -188,7 +188,7 @@
                 <img src="img/mision.webp" alt="Imagen de Misión" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center p-8">
                   <h3 class="text-3xl md:text-5xl font-bold text-white flex items-center justify-center mb-4">
-                    <i class="fi-br-flag text-4xl md:text-6xl text-violet-400 mr-3"></i> Misión
+                    <i class="fi-br-flag text-4xl md:text-6xl text-accent-light mr-3"></i> Misión
                   </h3>
                   <p class="text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-xl">
                     Proveer soluciones de conectividad y redes robustas y eficientes, para asegurar la continuidad operativa y el crecimiento de nuestros clientes.
@@ -199,7 +199,7 @@
                 <img src="img/vision.webp" alt="Imagen de Visión" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-black bg-opacity-60  flex flex-col items-center justify-center text-center p-8">
                   <h3 class="text-3xl md:text-5xl font-bold text-white flex items-center justify-center mb-4">
-                    <i class="fi-br-eye text-4xl md:text-6xl text-indigo-400 mr-3"></i> Visión
+                    <i class="fi-br-eye text-4xl md:text-6xl text-accent-secondary mr-3"></i> Visión
                   </h3>
                   <p class="text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-xl">
                     Ser el referente principal en infraestructura de telecomunicaciones y soporte tecnológico en el sur de Venezuela, reconocidos por nuestra capacidad de innovar y fiabilidad.
@@ -208,26 +208,26 @@
               </div>
             </div>
             <div class="content-card mt-20 animate-on-scroll">
-              <h3 class="text-3xl md:text-4xl font-bold text-center text-violet-400 mb-12">Nuestros Valores</h3>
-              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-zinc-200">
+              <h3 class="text-3xl md:text-4xl font-bold text-center text-accent-light mb-12">Nuestros Valores</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-text-light">
                 <div class="flex flex-col items-center text-center p-4">
-                  <i class="fi-br-shield-check text-5xl text-violet-500 mb-3"></i>
+                  <i class="fi-br-shield-check text-5xl text-accent-primary mb-3"></i>
                   <h4 class="text-lg font-semibold">Fiabilidad</h4>
                 </div>
                 <div class="flex flex-col items-center text-center p-4">
-                  <i class="fi-br-bolt text-5xl text-violet-500 mb-3"></i>
+                  <i class="fi-br-bolt text-5xl text-accent-primary mb-3"></i>
                   <h4 class="text-lg font-semibold">Agilidad</h4>
                 </div>
                 <div class="flex flex-col items-center text-center p-4">
-                  <i class="fi-br-marker text-5xl text-violet-500 mb-3"></i>
+                  <i class="fi-br-marker text-5xl text-accent-primary mb-3"></i>
                   <h4 class="text-lg font-semibold">Conocimiento Local</h4>
                 </div>
                 <div class="flex flex-col items-center text-center p-4">
-                  <i class="fi-br-trophy text-5xl text-violet-500 mb-3"></i>
+                  <i class="fi-br-trophy text-5xl text-accent-primary mb-3"></i>
                   <h4 class="text-lg font-semibold">Excelencia Técnica</h4>
                 </div>
                 <div class="flex flex-col items-center text-center p-4 col-span-2 sm:col-span-1">
-                  <i class="fi-br-handshake text-5xl text-violet-500 mb-3"></i>
+                  <i class="fi-br-handshake text-5xl text-accent-primary mb-3"></i>
                   <h4 class="text-lg font-semibold">Integridad</h4>
                 </div>
               </div>
@@ -235,12 +235,11 @@
           </div>
         </section>
 
-
-
-        <section id="hotspots" class="py-16 md:py-20 bg-zinc-900">
-            <div class="container mx-auto px-6">
+        <!-- Hotspots Section -->
+        <section id="hotspots" class="my-8 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-20 bg-primary rounded-t-[40px] rounded-b-[40px] shadow-lg">
+            <div class="container mx-auto">
                  <div class="title-card animate-on-scroll">
-                    <h2 class="title-card-header">Soluciones Avanzadas de Hotspot
+                    <h2 class="title-card-header">Soluciones de Hotspot
                         <span class="inline-block align-middle"><i class="fi-br-wifi text-2xl"></i></span>
                     </h2>
                     <p class="title-card-text">Apoyamos su negocio con sistemas Hotspot sencillos de gestionar que ofrecen un acceso seguro y personalizado.</p>
@@ -265,7 +264,7 @@
                                 <img src="img/telegram-support.webp" alt="Soporte y Alertas Hotspot vía Telegram" class="w-full h-full object-cover">
                             </picture>
                         </div>
-                         <p class="text-center text-sm text-slate-500 mt-2">Imágenes representativas de nuestras soluciones Hotspot.</p>
+                         <p class="text-center text-sm text-text-muted mt-2">Imágenes representativas de nuestras soluciones Hotspot.</p>
                     </div>
                     <div class="space-y-6 md:space-y-8">
                         <div class="content-card animate-on-scroll" style="transition-delay: 0.4s;"><div class="flex items-start"><span class="feature-icon"><i class="fi-br-settings text-2xl"></i></span><div><h4 class="card-title">Configuración Profesional</h4><p class="card-text">Implementamos y ajustamos su Hotspot (Mikrotik, UniFi, etc.) para un rendimiento óptimo, con portales cautivos personalizados y gestión de ancho de banda.</p></div></div></div>
@@ -276,8 +275,9 @@
             </div>
         </section>
 
-        <section id="satellital-solutions" class="py-16 md:py-20 bg-black rounded-b-[40px] shadow-lg">
-            <div class="container mx-auto px-6">
+        <!-- Satellital Solutions Section -->
+        <section id="satellital-solutions" class="my-8 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-20 bg-dark rounded-t-[40px] rounded-b-[40px] shadow-lg">
+            <div class="container mx-auto">
                 <div class="grid md:grid-cols-2 md:gap-12 md:items-center">
                     <div class="text-center md:text-left mb-12 md:mb-0 animate-on-scroll">
                         <div class="title-card !text-left">
@@ -309,15 +309,16 @@
             </div>
         </section>
 
-        <section id="focus" class="py-16 md:py-20 bg-zinc-900">
-            <div class="container mx-auto px-6">
+        <!-- Focus Section -->
+        <section id="focus" class="my-8 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-20 bg-primary rounded-t-[40px] rounded-b-[40px] shadow-lg">
+            <div class="container mx-auto">
                 <div class="title-card animate-on-scroll">
-                    <h2 class="title-card-header">Nuestro Enfoque y Público Objetivo</h2>
+                    <h2 class="title-card-header">Nuestro Enfoque</h2>
                     <p class="title-card-text">Nos dedicamos a abordar los desafíos de conectividad en el Estado Bolívar, trabajando con sectores clave para fomentar su desarrollo.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center mt-16">
                     <div class="animate-on-scroll space-y-6" style="transition-delay: 0.3s;">
-                        <h3 class="text-2xl font-bold text-violet-400 mb-6 text-center md:text-left">A Quién Servimos</h3>
+                        <h3 class="text-2xl font-bold text-accent-light mb-6 text-center md:text-left">A Quién Servimos</h3>
                         <div class="content-card">
                              <h4 class="card-title mb-2">Empresas en Zonas Remotas<span class="float-right text-3xl"><i class="fi-br-mountains icon-color-accent"></i></span></h4>
                              <p class="card-text">Operaciones mineras, agrícolas y de logística que requieren conectividad robusta y fiable en entornos desafiantes.</p>
@@ -337,14 +338,15 @@
                                 <canvas id="focusChart"></canvas>
                            </div>
                         </div>
-                        <p class="text-center mt-4 text-sm text-slate-500">Visualización del enfoque principal de nuestros proyectos.</p>
+                        <p class="text-center mt-4 text-sm text-text-muted">Visualización del enfoque principal de nuestros proyectos.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="full-services" class="py-16 md:py-20 bg-black rounded-t-[40px] shadow-lg">
-            <div class="container mx-auto px-6">
+        <!-- Full Services Section -->
+        <section id="full-services" class="my-8 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-20 bg-dark rounded-t-[40px] rounded-b-[40px] shadow-lg">
+            <div class="container mx-auto">
                 <div class="title-card animate-on-scroll">
                     <h2 class="title-card-header">Nuestros Servicios en Detalle</h2>
                     <p class="title-card-text">
@@ -386,18 +388,19 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-20 bg-zinc-900 rounded-b-[40px] shadow-lg">
-            <div class="container mx-auto px-6 text-center">
+        <!-- Contact Section -->
+        <section id="contact" class="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-20 bg-primary rounded-t-[40px] shadow-lg">
+            <div class="container mx-auto text-center">
                  <div class="title-card animate-on-scroll">
                     <h2 class="title-card-header">Contáctanos</h2>
                     <p class="title-card-text">Estamos listos para resolver tus desafíos de conectividad. Comunícate con nosotros.</p>
                 </div>
                 <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mt-12">
-                    <a href="mailto:info@teliosconnect.com" class="contact-circle-button accent-violet-bg text-white font-semibold shadow-md hover:shadow-lg animate-on-scroll" style="transition-delay: 0.4s;">
+                    <a href="mailto:info@teliosconnect.com" class="contact-circle-button bg-accent-violet text-white font-semibold shadow-md hover:shadow-lg animate-on-scroll" style="transition-delay: 0.4s;">
                         <span class="text-2xl"><i class="fi-br-envelope"></i></span>
                         <span class="button-text">Contactar por Email</span>
                     </a>
-                    <a href="https://wa.me/584249263394" target="_blank" class="contact-circle-button accent-violet-bg text-white font-semibold shadow-md hover:shadow-lg animate-on-scroll" style="transition-delay: 0.5s;">
+                    <a href="https://wa.me/584249263394" target="_blank" class="contact-circle-button bg-accent-violet text-white font-semibold shadow-md hover:shadow-lg animate-on-scroll" style="transition-delay: 0.5s;">
                         <span class="text-2xl"><img class="w-8 h-8" src="img/ws-icon.svg" alt="Icono de WhatsApp"></span>
                         <span class="button-text">Chatear por WhatsApp</span>
                     </a>
@@ -407,17 +410,17 @@
     </main>
 
     <div id="floating-contact-button" class="floating-contact-button opacity-0 pointer-events-none">
-        <a href="#contact" class="btn-primary-bg hover:btn-primary-hover-bg text-white rounded-full shadow-lg p-4 transition-all duration-300 flex items-center justify-center">
+        <a href="#contact" class="btn-primary hover:btn-primary-hover text-white rounded-full shadow-lg p-4 transition-all duration-300 flex items-center justify-center">
             <i class="fi-br-messages text-2xl"></i>
         </a>
     </div>
 
-    <footer class="header-footer-bg text-slate-300 py-10">
-        <div class="container mx-auto px-6 text-center">
+    <footer class="bg-header-footer text-text-light py-10 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8">
+        <div class="container mx-auto text-center">
             <img class="h-12 mx-auto mb-4 rounded" src="img/logo.svg" alt="Telios Connect Logo">
             <p class="font-bold text-xl mb-2 text-white">Telios Connect</p>
             <p class="italic">"Conectando con dedicación, incluso en la distancia."</p>
-            <p class="text-sm mt-6 text-zinc-400">&copy; <span id="currentYear"></span> Telios Connect. Todos los derechos reservados.</p>
+            <p class="text-sm mt-6 text-text-muted">&copy; <span id="currentYear"></span> Telios Connect. Todos los derechos reservados.</p>
         </div>
     </footer>
 
